@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap');
+.NavbarContainer{
+    display: flex;
+    padding: 5px;
+    min-width: none;   
+    align-content: center;
+    align-items: center; 
+    vertical-align: middle;
+}
+
+.MainMenuButton{
+    margin-right: 5px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    outline-color: black;
+}
+.Logo{
+    font-size: xx-large;
+    font-weight: 700;
+    font-family: 'Baloo Thambi 2';
+    margin-right: 10px;
+    outline:#000000;
+}
+.SearchBar{
+    width: 100%;
+    max-width: 500px;
+    font-size: larger;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
+
+}
+
+.SellProductButton{
+    font-size: larger;
+    color: white;
+    background-color: #1978F0;
+    border: none;
+    margin-left: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.LogInAndOut{
+    font-size: larger;
+    color: white;
+    background-color: #000000;
+    border: none;
+    margin-left: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@media (max-width:1090px) {
+    .LogInAndOut{
+        display: none;
+    }
+}
+
+@media (max-width:945px) {
+    .SellProductButton{
+        display: none;
+    }
+}
