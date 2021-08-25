@@ -1,12 +1,12 @@
+import { useDispatch, useSelector } from 'react-redux'
+import { setMainMenuToClose, setMainMenuToOpen } from '../../redux/actions/mainMenu'
 import styles from './Navbar.module.css'
+
 export default function Navbar (){
     return(
         <div className={styles.NavbarContainer}>          
-            <button className={styles.MainMenuButton}>
-                <i class="bi bi-list MainMenuIcon" 
-                style={{fontSize: '40px'}}>
-                </i>
-            </button>
+            <MenuButton/>
+
             <a className={styles.Logo}>
                 TusCompras
             </a>
@@ -23,5 +23,34 @@ export default function Navbar (){
                 Iniciar sesion
             </button>
         </div>
+    )
+}
+
+function MenuButton(){
+    const isMainMenuOpen = useSelector(state => state.MainMenu.open)
+
+    const dispatch = useDispatch()
+    const openMainMenu = () =>{
+        dispatch(setMainMenuToOpen())
+    }
+    const closeMainMenu = () =>{
+        dispatch(setMainMenuToClose())
+    }
+    if(isMainMenuOpen){
+        return(
+        <button className={styles.MainMenuButton}
+        onClick={()=>closeMainMenu()}>
+            <i class="bi bi-x" 
+            style={{fontSize: '40px'}}>
+            </i>
+        </button>
+        )
+    }else return(
+        <button className={styles.MainMenuButton}
+        onClick={()=>openMainMenu()}>
+            <i class="bi bi-list MainMenuIcon" 
+            style={{fontSize: '40px'}}>
+            </i>
+        </button>
     )
 }

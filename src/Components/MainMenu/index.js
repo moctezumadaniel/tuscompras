@@ -1,3 +1,5 @@
+import { useSelector } from "react-redux"
+
 const titles = {
     sell:'Vender mi producto',
 
@@ -21,6 +23,8 @@ const titles = {
 }
 
 export default function MainMenu (){
+    const isMainMenuOpen = useSelector(state => state.MainMenu.open)
+    if(isMainMenuOpen)
     return(
         <div>
            <ul>
@@ -42,5 +46,8 @@ export default function MainMenu (){
                <li>{titles.security}</li>
            </ul>
         </div>
+    )
+    else return (
+        ""
     )
 }
