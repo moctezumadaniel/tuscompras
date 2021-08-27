@@ -1,0 +1,71 @@
+.menuContainer{
+    display: flex;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    top:60px;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.menuBackground{
+    flex: 1;
+    background-color: rgba(0,0,0,.8);
+    opacity: 0.9;
+    animation-duration: 500ms;
+    z-index: 9999;
+}
+.menuCanvas{
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px;
+    justify-content: left;
+    align-content: left;
+    padding: 0;
+    padding-left: 30px;
+    margin: 0;
+    top: 60px;
+    bottom: 0;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 100000;
+}
+
+.SellProductButton{
+    font-size: larger;
+    color: white;
+    background-color: #1978F0;
+    border: none;
+    margin-left: -10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+    text-align: left;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+h3{
+    text-align: left;
+}
+
+@media (max-width:500px) {
+    .menuCanvas{
+        width:92%;
+    }
+    .menuBackground{
+        display: none;
+    }
+}

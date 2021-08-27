@@ -1,5 +1,6 @@
-import { useSelector } from "react-redux"
-
+import { useDispatch, useSelector } from "react-redux"
+import { setMainMenuToClose } from "../../redux/actions/mainMenu"
+import styles from './MainMenu.module.css'
 const titles = {
     sell:'Vender mi producto',
 
@@ -24,13 +25,22 @@ const titles = {
 
 export default function MainMenu (){
     const isMainMenuOpen = useSelector(state => state.MainMenu.open)
+    const dispatch = useDispatch()
+    const closeMainMenu = () =>{
+        dispatch(setMainMenuToClose())
+    }
     if(isMainMenuOpen)
     return(
-        <div>
-           <ul>
-               <button>{titles.sell}</button>
+        <div className={styles.menuContainer}>
+           <ul className={styles.menuCanvas}>
+               <button className={styles.SellProductButton}>
+                   {titles.sell}
+                </button>
+
                <h3>{titles.sales}</h3>
-               <a>{titles.products}</a>
+               <li>
+                  <a>{titles.products}</a>
+                </li>
                <li>{titles.salesList}</li>
                <li>{titles.buyersReturns}</li>
                <li>{titles.buyersMessages}</li>
@@ -45,6 +55,10 @@ export default function MainMenu (){
                <li>{titles.addresses}</li>
                <li>{titles.security}</li>
            </ul>
+           <div className={styles.menuBackground}
+           onClick={()=>closeMainMenu()}>
+
+           </div>
         </div>
     )
     else return (
