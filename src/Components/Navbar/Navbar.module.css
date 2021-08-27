@@ -3,6 +3,7 @@
 .NavbarContainer{
     display: flex;
     padding: 5px;
+    padding-left: 0;
     min-width: none;   
     align-content: center;
     align-items: center; 
@@ -10,7 +11,7 @@
 }
 
 .MainMenuButton{
-    margin-right: 5px;
+    margin-right: 0;
     background-color: white;
     border: none;
     cursor: pointer;
