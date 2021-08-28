@@ -1,0 +1,28 @@
+.ProductContainer{
+    width: 300px;
+    margin: 10px;
+}
+
+.TitleContainer{
+    display: flex;
+    align-content: flex-start;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: larger;
+}
+
+.ReviewPriceContainer{
+    text-align: left;
+    justify-content: flex-start;
+}
+    .Review{
+        font-size: large;
+        font-weight: 600;
+        margin-right: 20px;
+    }
+
+    .Price{
+        font-size: large;
+        font-weight: 600;
+        margin-right: 20px;
+    }
