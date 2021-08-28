@@ -28,13 +28,15 @@ export default function Navbar (){
 
 function MenuButton(){
     const isMainMenuOpen = useSelector(state => state.MainMenu.open)
-
+    const body = document.getElementById('body')
     const dispatch = useDispatch()
     const openMainMenu = () =>{
         dispatch(setMainMenuToOpen())
+        body.style.overflow = 'hidden'
     }
     const closeMainMenu = () =>{
         dispatch(setMainMenuToClose())
+        body.style.overflow = 'visible'
     }
     if(isMainMenuOpen){
         return(

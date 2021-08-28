@@ -1,11 +1,11 @@
+import styles from './MainScreen.module.css'
 import ListOfProducts from "../ListOfProducts"
 import MainMenu from "../MainMenu"
 import Navbar from "../Navbar"
-import ProductPreview from "../ProductPreview"
 
 export default function MainScreen (){
     return(
-        <div>
+        <div className={styles.MainScreenContainer}>
             <Navbar/>
             <MainMenu/>
             <ListOfProducts/>

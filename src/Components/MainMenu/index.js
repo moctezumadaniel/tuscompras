@@ -26,8 +26,10 @@ const titles = {
 export default function MainMenu (){
     const isMainMenuOpen = useSelector(state => state.MainMenu.open)
     const dispatch = useDispatch()
+    const body = document.getElementById('body')
     const closeMainMenu = () =>{
         dispatch(setMainMenuToClose())
+        body.style.overflow = 'visible'
     }
     if(isMainMenuOpen)
     return(

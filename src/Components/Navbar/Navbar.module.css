@@ -2,12 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap');
 .NavbarContainer{
     display: flex;
-    padding: 5px;
     padding-left: 0;
     min-width: none;   
     align-content: center;
     align-items: center; 
     vertical-align: middle;
+    position: sticky;
+    top: -1px;
+    
 }
 
 .MainMenuButton{

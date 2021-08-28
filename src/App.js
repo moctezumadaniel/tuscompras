@@ -3,9 +3,11 @@ import MainScreen from './Components/MainScreen';
 
 function App() {
   return (
-    <div className="App">
+
       <MainScreen/>
-    </div>
+ 
+      
+    
   );
 }
 
