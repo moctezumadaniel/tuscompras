@@ -31,10 +31,10 @@ export default function MainMenu (){
         dispatch(setMainMenuToClose())
         body.style.overflow = 'visible'
     }
-    if(isMainMenuOpen)
+    // if(isMainMenuOpen)
     return(
-        <div className={styles.menuContainer}>
-           <ul className={styles.menuCanvas}>
+        <div className={isMainMenuOpen? styles.menuContainer: styles.menuContainerHided}>
+           <ul className={isMainMenuOpen? styles.menuCanvas: styles.menuCanvasHided}>
                <button className={styles.SellProductButton}>
                    {titles.sell}
                 </button>
@@ -57,13 +57,13 @@ export default function MainMenu (){
                <li>{titles.addresses}</li>
                <li>{titles.security}</li>
            </ul>
-           <div className={styles.menuBackground}
+           <div className={isMainMenuOpen ? styles.menuBackground: styles.menuBackgroundHided}
            onClick={()=>closeMainMenu()}>
 
            </div>
         </div>
     )
-    else return (
-        ""
-    )
+    // else return (
+    //     ""
+    // )
 }

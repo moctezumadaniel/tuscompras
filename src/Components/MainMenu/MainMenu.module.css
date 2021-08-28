@@ -9,13 +9,21 @@
     height: 100%;
     width: 100%;
 }
-
+.menuContainerHided{
+    
+    animation-duration: 500ms;
+}
 .menuBackground{
     flex: 1;
     background-color: rgba(0,0,0,.8);
     opacity: 0.9;
     animation-duration: 500ms;
     z-index: 9999;
+}
+
+.menuBackgroundHided{
+    animation-name: hideElement;
+    animation-duration: 500ms;
 }
 .menuCanvas{
     display: flex;
@@ -36,6 +44,30 @@
     z-index: 100000;
 
     animation-name: slideMenu;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+}
+
+.menuCanvasHided{
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px;
+    justify-content: left;
+    align-content: left;
+    padding: 0;
+    padding-left: 30px;
+    margin: 0;
+    top: 60px;
+    bottom: 0;
+    left: -500px;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 100000;
+
+    animation-name: slideBackMenu;
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
 }
@@ -80,12 +112,24 @@ h3{
     }
 }
 
+
 @keyframes slideMenu {
     0%{
-        left:-400px
+        left:-500px
     }
     100%{
         left: 0;
     }
 }
 
+@keyframes hideElement {
+    100%{
+        display: none;
+    }
+}
+@keyframes slideBackMenu {
+    0%{
+        left:0
+    }
+
+}
