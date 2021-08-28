@@ -26,3 +26,11 @@
         font-weight: 600;
         margin-right: 20px;
     }
+
+@media (max-width:400px) {
+    .ProductContainer{
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+}
