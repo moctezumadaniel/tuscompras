@@ -1,9 +1,13 @@
+import ProductFilters from '../ProductFilters'
 import ProductPreview from '../ProductPreview'
 import styles from './ListOfProducts.module.css'
 
 function ListOfProducts(){
     return(
+        <>
+        <ProductFilters/>
         <div className={styles.ProductsContainer}>
+            
             <ProductPreview 
             title="ejemplo largo de la descripcion de un producto"
             price="50000"
@@ -24,6 +28,7 @@ function ListOfProducts(){
             price="50000"
             review="10/10"/>
         </div>
+        </>
     )
 }
 export default ListOfProducts
