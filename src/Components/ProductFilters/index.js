@@ -1,3 +1,5 @@
+import { useDispatch, useSelector } from 'react-redux'
+import { closeProductFilters, openProductFilters, toggleProductFilters } from '../../redux/actions/productFilters'
 import styles from './ProductFilters.module.css'
 const titles ={
     openFilters:'Filtrar Productos',
@@ -21,10 +23,17 @@ const titles ={
     everyRating:'Cualquier calificacion'
 }
 function ProductFilters (){
+    const filters = useSelector(state => state.ProductFilters)
+    const dispatch = useDispatch()
+    console.log(filters)
+    const openCloseFilters = () =>{
+        dispatch(toggleProductFilters())
+    }
     return(
         <div>
 
-            <button className={styles.FilterButton}>
+            <button className={styles.FilterButton}
+            onClick={()=>openCloseFilters()}>
             <i class="bi bi-funnel-fill"
             style={{marginRight:"10px"}}></i>
             {titles.openFilters}
