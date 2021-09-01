@@ -14,6 +14,9 @@ const titles ={
     orderByMostExpensive:'Más caros',
     orderByBestRated:'Mejor calificados',
     orderByMostImportant:'Más importantes',
+    // PRICE
+    minPrice:'Desde',
+    maxPrice:'Hasta',
     // RATED WITH
     ratedTen:'Solo 10/10',
     ratedNine:'9/10 y superiores',
@@ -30,13 +33,15 @@ function ProductFilters (){
         dispatch(toggleProductFilters())
     }
     return(
-        <div>
+        <div className={styles.FiltersContainer}>
 
             <button className={styles.FilterButton}
             onClick={()=>openCloseFilters()}>
                 <i class="bi bi-funnel-fill"
                 style={{marginRight:"10px"}}></i>
-                {titles.openFilters}
+                {filters.status === 'opened'?
+                titles.applyFilters
+                :titles.openFilters}
             </button>
 
             <ListOfProducts filters={filters}/>
@@ -49,7 +54,7 @@ export default ProductFilters
 function ListOfProducts({filters}){
     if(filters.status === 'opened')
     return(
-        <div className={styles.FiltersContainer}>
+        <div className={styles.ListOfFilters}>
             {/* ORDER */}
             <div className={styles.OrderContainer}>
                 <div className={styles.FilterTitle}>
@@ -67,16 +72,12 @@ function ListOfProducts({filters}){
                 <div className={styles.FilterTitle}>
                     {titles.priceRange}
                 </div>
-                <div className={styles.AmounthInputContainer}>
-                    <div className={styles.AmounthContainer}>
-                        <div>{titles.priceFrom}</div>
-                        <input className={styles.AmounthInput}/>
-                    </div>
-                    <div className={styles.AmounthContainer}>
-                        <div>{titles.priceTo}</div>
-                        <input className={styles.AmounthInput}/>
-                    </div>
-                </div>
+                                       
+                        <input className={styles.AmounthInput}
+                        placeholder={titles.minPrice}/>
+                        <input className={styles.AmounthInput}
+                        placeholder={titles.maxPrice}/>
+               
             </div>
             {/* RATING */}
             <div className={styles.RatingContainer}>
