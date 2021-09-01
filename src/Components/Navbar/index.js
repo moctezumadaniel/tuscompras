@@ -27,7 +27,7 @@ export default function Navbar (){
 }
 
 function MenuButton(){
-    const isMainMenuOpen = useSelector(state => state.MainMenu.open)
+    const menuStatus = useSelector(state => state.MainMenu.status)
     const body = document.getElementById('body')
     const dispatch = useDispatch()
     const openMainMenu = () =>{
@@ -38,7 +38,7 @@ function MenuButton(){
         dispatch(setMainMenuToClose())
         body.style.overflow = 'visible'
     }
-    if(isMainMenuOpen){
+    if(menuStatus === 'opened'){
         return(
         <button className={styles.MainMenuButton}
         onClick={()=>closeMainMenu()}>

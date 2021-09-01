@@ -1,5 +1,5 @@
 const initialState = {
-    open:false
+    status:''
 }
 
 export const MainMenuReducer = (state=initialState, action) =>{
@@ -7,12 +7,12 @@ export const MainMenuReducer = (state=initialState, action) =>{
         case 'SET_MAIN_MENU_TO_OPEN':
             return {
                 ...state,
-                open:true
+                status:'opened'
             }
         case 'SET_MAIN_MENU_TO_CLOSE':
             return{
                 ...state,
-                open:false
+                status:'closed'
             }
         default:
              return state

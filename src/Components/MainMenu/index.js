@@ -24,17 +24,17 @@ const titles = {
 }
 
 export default function MainMenu (){
-    const isMainMenuOpen = useSelector(state => state.MainMenu.open)
+    const menuStatus = useSelector(state => state.MainMenu.status)
     const dispatch = useDispatch()
     const body = document.getElementById('body')
     const closeMainMenu = () =>{
         dispatch(setMainMenuToClose())
         body.style.overflow = 'visible'
     }
-    // if(isMainMenuOpen)
+    if(menuStatus !== '')
     return(
-        <div className={isMainMenuOpen? styles.menuContainer: styles.menuContainerHided}>
-           <ul className={isMainMenuOpen? styles.menuCanvas: styles.menuCanvasHided}>
+        <div className={menuStatus === 'opened'? styles.menuContainer: styles.menuContainerHided}>
+           <ul className={menuStatus === 'opened'? styles.menuCanvas: styles.menuCanvasHided}>
                <button className={styles.SellProductButton}>
                    {titles.sell}
                 </button>
@@ -57,13 +57,11 @@ export default function MainMenu (){
                <li>{titles.addresses}</li>
                <li>{titles.security}</li>
            </ul>
-           <div className={isMainMenuOpen ? styles.menuBackground: styles.menuBackgroundHided}
+           <div className={menuStatus === 'opened' ? styles.menuBackground: styles.menuBackgroundHided}
            onClick={()=>closeMainMenu()}>
 
            </div>
         </div>
     )
-    // else return (
-    //     ""
-    // )
+    else return ""
 }
