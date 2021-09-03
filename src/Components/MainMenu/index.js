@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
+import { Link, BrowserRouter as Router } from "react-router-dom"
 import { setMainMenuToClose } from "../../redux/actions/mainMenu"
 import styles from './MainMenu.module.css'
 const titles = {
@@ -33,6 +34,7 @@ export default function MainMenu (){
     }
     if(menuStatus !== '')
     return(
+        <Router>
         <div className={menuStatus === 'opened'? styles.menuContainer: styles.menuContainerHided}>
            <ul className={menuStatus === 'opened'? styles.menuCanvas: styles.menuCanvasHided}>
                <button className={styles.SellProductButton}>
@@ -41,27 +43,46 @@ export default function MainMenu (){
 
                <h3>{titles.sales}</h3>
                <li>
-                  <a>{titles.products}</a>
+                  <Link className={styles.link} to="/products">{titles.products}</Link>
                 </li>
-               <li>{titles.salesList}</li>
-               <li>{titles.buyersReturns}</li>
-               <li>{titles.buyersMessages}</li>
+               <li>
+                   <Link className={styles.link} to="/sales">{titles.salesList}</Link>
+                </li>
+               <li>
+                   <Link className={styles.link} to="/buyersReturns">{titles.buyersReturns}</Link>
+                </li>
+               <li>
+                   <Link className={styles.link} to="/buyersMessages">{titles.buyersMessages}</Link>
+                </li>
 
                <h3>{titles.purchases}</h3>
-               <li>{titles.purchasesList}</li>
-               <li>{titles.returns}</li>
-               <li>{titles.sellersMessages}</li>
+               <li>
+                   <Link className={styles.link} to="/purchases">{titles.purchasesList}</Link>
+                </li>
+               <li>
+                   <Link className={styles.link} to="/returns">{titles.returns}</Link>
+                </li>
+               <li>
+                   <Link className={styles.link} to="/sellersMessages">{titles.sellersMessages}</Link>
+                </li>
 
                <h3>{titles.profile}</h3>
-               <li>{titles.profileName}</li>
-               <li>{titles.addresses}</li>
-               <li>{titles.security}</li>
+               <li>
+                   <Link className={styles.link} to="/profile">{titles.profileName}</Link>
+                </li>
+               <li>
+                   <Link className={styles.link} to="/addresses">{titles.addresses}</Link>
+                </li>
+               <li>
+                   <Link className={styles.link} to="/security">{titles.security}</Link>
+                </li>
            </ul>
            <div className={menuStatus === 'opened' ? styles.menuBackground: styles.menuBackgroundHided}
            onClick={()=>closeMainMenu()}>
 
            </div>
         </div>
+        </Router>
     )
     else return ""
 }

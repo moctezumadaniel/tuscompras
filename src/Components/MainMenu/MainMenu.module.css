@@ -89,8 +89,15 @@ li{
     text-decoration: none;
     list-style: none;
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     cursor: pointer;
+}
+
+.link{
+    font-size: large;
+    display: flex;
+    text-decoration: none;
+    color: black;
 }
 
 h3{
