@@ -51,10 +51,10 @@ export default function MainMenu (){
                    <Link className={styles.link} to="/sales">{titles.salesList}</Link>
                 </li>
                <li>
-                   <Link className={styles.link} to="/buyersReturns">{titles.buyersReturns}</Link>
+                   <Link className={styles.link} to="/customersReturns">{titles.buyersReturns}</Link>
                 </li>
                <li>
-                   <Link className={styles.link} to="/buyersMessages">{titles.buyersMessages}</Link>
+                   <Link className={styles.link} to="/customersMessages">{titles.buyersMessages}</Link>
                 </li>
 
                 <li>
