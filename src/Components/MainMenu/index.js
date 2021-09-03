@@ -12,7 +12,7 @@ const titles = {
     buyersMessages: 'Mensajes de compradores',
 
     purchases:'Compras',
-    purchasesList:'LIsta de compras',
+    purchasesList:'Lista de compras',
     returns:'Mis devoluciones',
     sellersMessages:'Mensajes con vendedores',
 
@@ -40,8 +40,10 @@ export default function MainMenu (){
                <button className={styles.SellProductButton}>
                    {titles.sell}
                 </button>
-
-               <h3>{titles.sales}</h3>
+                <li>
+                    <h3>{titles.sales}</h3>
+                </li>
+               
                <li>
                   <Link className={styles.link} to="/products">{titles.products}</Link>
                 </li>
@@ -55,7 +57,10 @@ export default function MainMenu (){
                    <Link className={styles.link} to="/buyersMessages">{titles.buyersMessages}</Link>
                 </li>
 
-               <h3>{titles.purchases}</h3>
+                <li>
+                    <h3>{titles.purchases}</h3>
+                </li>
+               
                <li>
                    <Link className={styles.link} to="/purchases">{titles.purchasesList}</Link>
                 </li>
@@ -65,8 +70,10 @@ export default function MainMenu (){
                <li>
                    <Link className={styles.link} to="/sellersMessages">{titles.sellersMessages}</Link>
                 </li>
-
-               <h3>{titles.profile}</h3>
+                <li>
+                    <h3>{titles.profile}</h3>
+                </li>
+               
                <li>
                    <Link className={styles.link} to="/profile">{titles.profileName}</Link>
                 </li>

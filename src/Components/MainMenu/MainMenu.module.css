@@ -88,16 +88,22 @@
 li{
     text-decoration: none;
     list-style: none;
-    text-align: left;
-    margin-bottom: 15px;
     cursor: pointer;
+    list-style: none;
 }
 
 .link{
-    font-size: large;
     display: flex;
+    width:max-content;
+    list-style: none;
+    font-size: large;
     text-decoration: none;
     color: black;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.link:hover{
+    background-color:#DEE3ED;
 }
 
 h3{
