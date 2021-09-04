@@ -1,14 +1,17 @@
 .FilterButton{
     margin: 5px;
     width: 97%;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     font-size: large;
     background-color: black;
     color: white;
     border-radius: 5px;
     cursor: pointer;
     align-self: center;
+    border: none;
+    outline-color: #1978F0;
+    outline-offset: 3px;
 }
 .FiltersContainer{
     display: flex;
