@@ -12,6 +12,7 @@ import SellersMessages from '../SellersMessages'
 import Profile from '../Profile'
 import Addresses from '../Addresses'
 import Security from '../Security'
+import ProductSettings from '../ProductSettings'
 
 export default function MainScreen (){
     return(
@@ -19,9 +20,9 @@ export default function MainScreen (){
         <div className={styles.MainScreenContainer}>
             <Navbar/>
             <MainMenu/>
-
+            <ProductSettings/>
             
-                <Switch>
+                {/* <Switch>
 
                     <Route path="/">
                         <ListOfProducts/>
@@ -63,7 +64,7 @@ export default function MainScreen (){
                         <Security/>
                     </Route>
                     
-                </Switch>
+                </Switch> */}
             
             
 
