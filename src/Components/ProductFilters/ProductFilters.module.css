@@ -36,6 +36,7 @@
     width: 100%;
     border-radius: 5px;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
+    outline-color: black;
 }
 .AmounthInput{
     width: 95%;
@@ -46,6 +47,8 @@
     margin: 5px;
     border-radius: 5px;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
+    outline-color: black;
+
 }
 .OrderContainer{
     padding: 5px;

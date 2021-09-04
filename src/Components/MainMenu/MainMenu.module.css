@@ -83,6 +83,8 @@
     padding-right: 10px;
     border-radius: 20px;
     cursor: pointer;
+    outline-color: black;
+
 }
 
 li{
@@ -101,6 +103,7 @@ li{
     color: black;
     padding-top: 7px;
     padding-bottom: 7px;
+    outline-color: black;
 }
 .link:hover{
     background-color:#DEE3ED;
