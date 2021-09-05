@@ -38,7 +38,10 @@ export default function MainMenu (){
         <div className={menuStatus === 'opened'? styles.menuContainer: styles.menuContainerHided}>
            <ul className={menuStatus === 'opened'? styles.menuCanvas: styles.menuCanvasHided}>
                <button className={styles.SellProductButton}>
-                   {titles.sell}
+                   <a className={styles.SellProductLink} href="/sell">
+                        {titles.sell}
+                   </a>
+                   
                 </button>
                 <li>
                     <h3>{titles.sales}</h3>

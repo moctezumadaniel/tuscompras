@@ -86,6 +86,10 @@
     outline-color: black;
 
 }
+.SellProductLink{
+    text-decoration: none;
+    color: white;
+}
 
 li{
     text-decoration: none;
