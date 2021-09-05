@@ -26,6 +26,8 @@
     font-family: 'Baloo Thambi 2';
     margin-right: 10px;
     outline:#000000;
+    text-decoration: none;
+    color: black;
 }
 .SearchBar{
     width: 100%;
@@ -52,6 +54,11 @@
     padding-right: 10px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.SellProductLink{
+    text-decoration: none;
+    color: white;
 }
 
 .LogInAndOut{

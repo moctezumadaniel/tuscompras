@@ -45,28 +45,28 @@ export default function MainMenu (){
                 </li>
                
                <li>
-                    <Link className={styles.link} to="/products"
+                    <a className={styles.link} href="/products"
                     onClick={()=>closeMainMenu()}>
                       {titles.products}
-                    </Link>
+                    </a>
                 </li>
                <li>
-                    <Link className={styles.link} to="/sales"
+                    <a className={styles.link} href="/sales"
                     onClick={()=>closeMainMenu()}>
                         {titles.salesList}
-                    </Link>
+                    </a>
                 </li>
                <li>
-                    <Link className={styles.link} to="/customersReturns"
+                    <a className={styles.link} href="/customersReturns"
                     onClick={()=>closeMainMenu()}>
                         {titles.buyersReturns}
-                    </Link>
+                    </a>
                 </li>
                <li>
-                    <Link className={styles.link} to="/customersMessages"
+                    <a className={styles.link} href="/customersMessages"
                     onClick={()=>closeMainMenu()}>
                         {titles.buyersMessages}
-                    </Link>
+                    </a>
                 </li>
 
                 <li>
@@ -74,44 +74,44 @@ export default function MainMenu (){
                 </li>
                
                <li>
-                   <Link className={styles.link} to="/purchases"
+                   <a className={styles.link} href="/purchases"
                    onClick={()=>closeMainMenu()}>
                        {titles.purchasesList}
-                    </Link>
+                    </a>
                 </li>
                <li>
-                   <Link className={styles.link} to="/returns"
+                   <a className={styles.link} href="/returns"
                    onClick={()=>closeMainMenu()}>
                        {titles.returns}
-                    </Link>
+                    </a>
                 </li>
                <li>
-                   <Link className={styles.link} to="/sellersMessages"
+                   <a className={styles.link} href="/sellersMessages"
                    onClick={()=>closeMainMenu()}>
                        {titles.sellersMessages}
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     <h3>{titles.profile}</h3>
                 </li>
                
                <li>
-                   <Link className={styles.link} to="/profile"
+                   <a className={styles.link} href="/profile"
                    onClick={()=>closeMainMenu()}>
                        {titles.profileName}
-                    </Link>
+                    </a>
                 </li>
                <li>
-                   <Link className={styles.link} to="/addresses"
+                   <a className={styles.link} href="/addresses"
                    onClick={()=>closeMainMenu()}>
                        {titles.addresses}
-                    </Link>
+                    </a>
                 </li>
                <li>
-                   <Link className={styles.link} to="/security"
+                   <a className={styles.link} href="/security"
                    onClick={()=>closeMainMenu()}>
                        {titles.security}
-                    </Link>
+                    </a>
                 </li>
            </ul>
            <div className={menuStatus === 'opened' ? styles.menuBackground: styles.menuBackgroundHided}

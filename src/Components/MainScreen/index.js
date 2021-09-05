@@ -20,13 +20,10 @@ export default function MainScreen (){
         <div className={styles.MainScreenContainer}>
             <Navbar/>
             <MainMenu/>
-            <ProductSettings/>
             
-                {/* <Switch>
+                 <Switch>
 
-                    <Route path="/">
-                        <ListOfProducts/>
-                    </Route>
+                    
                     
                     <Route path="/products">
                         <UserProducts/>
@@ -63,8 +60,12 @@ export default function MainScreen (){
                     <Route path="/security">
                         <Security/>
                     </Route>
+
+                    <Route path="/">
+                        <ListOfProducts/>
+                    </Route>
                     
-                </Switch> */}
+                </Switch>
             
             
 
