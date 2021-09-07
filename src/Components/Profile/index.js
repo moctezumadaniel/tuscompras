@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import styles from './Profile.module.css'
 const titles = {
     //NAME
@@ -17,17 +18,40 @@ const titles = {
 
 }
 function Profile (){
+    const [profile, setProfile] = useState({
+        name:'',
+        namePassword:'',
+        email:'',
+        emailPassword:'',
+        addresses:[],
+        newAddress:''
+    })
+    function setSecurityState (event){
+        setProfile({
+            ...profile,
+            [event.target.name]:event.target.value
+        })
+    }
     return (
         <div className={styles.ProfileContainer}>
             <div>
                 <div className={styles.Titles}>{titles.name}</div>
                 <div className={styles.NameInputsContainer}>
-                    <input type="text" 
+
+                    <input 
+                    type="text" 
+                    name="name"
+                    onChange={(event)=>setSecurityState(event)}
                     className={styles.ShortInput}
                     placeholder={titles.namePlaceholder}/>
-                    <input type="password"
+
+                    <input 
+                    type="password"
+                    name="namePassword"
+                    onChange={(event)=>setSecurityState(event)}
                     className={styles.ShortInput}
                     placeholder={titles.passwordPlaceholder}/>
+
                     <button className={styles.NameButton}>
                         {titles.changeName}
                     </button>
@@ -37,13 +61,20 @@ function Profile (){
             <div>
                 <div className={styles.Titles}>{titles.email}</div>
                 <div>
-                    <input type="email"
+                    <input 
+                    type="email"
+                    name="email"
+                    onChange={(event)=>setSecurityState(event)}
                     className={styles.ShortInput}
                     placeholder={titles.emailPlaceholder}/>
                     
-                    <input type="password"
+                    <input 
+                    type="password"
+                    name="emailPassword"
+                    onChange={(event)=>setSecurityState(event)}
                     className={styles.ShortInput}
                     placeholder={titles.passwordPlaceholder}/>
+                    
                     <button className={styles.EmailButton}>
                         {titles.changeEmail}
                     </button>
@@ -63,6 +94,8 @@ function Profile (){
                     </div>
                     <div className={styles.AddressContainer}>
                         <textarea 
+                        name="newAddress"
+                        onChange={(event)=>setSecurityState(event)}
                         className={styles.AddressInput}
                         placeholder={titles.addressesPlaceholder}/>
                         <button className={styles.AddAddress}>
