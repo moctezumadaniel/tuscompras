@@ -13,6 +13,7 @@
 }
 
 .Input{
+    box-sizing: border-box;
     width: 100%;
     max-width: 500px;
     padding: 10px;
@@ -23,14 +24,14 @@
     border-radius: 5px;
     outline-color: black;
     margin: 5px;
+    margin-bottom: 10px;
 }
 
 .PasswordButton{
     margin: 5px;
     width: 100%;
     max-width: 500px;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding: 10px;
     font-size: large;
     background-color: black;
     color: white;
@@ -40,4 +41,10 @@
     border: none;
     outline-color: #1978F0;
     outline-offset: 3px;
+}
+
+@media (min-width:1030px) {
+    .Input{
+        margin: 5px;
+    }
 }
