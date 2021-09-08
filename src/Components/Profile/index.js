@@ -34,7 +34,7 @@ function Profile (){
     }
     return (
         <div className={styles.ProfileContainer}>
-            <div>
+            <div className={styles.NameContainer}>
                 <div className={styles.Titles}>{titles.name}</div>
                 <div className={styles.NameInputsContainer}>
 
@@ -58,9 +58,9 @@ function Profile (){
                 </div>
             </div>
 
-            <div>
+            <div className={styles.EmailContainer}>
                 <div className={styles.Titles}>{titles.email}</div>
-                <div>
+                <div className={styles.EmailInputsContainer}>
                     <input 
                     type="email"
                     name="email"
