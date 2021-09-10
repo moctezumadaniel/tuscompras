@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import ProductPreview from '../ProductPreview'
-import SalesFilters from '../SalesFilters'
+import PurchasesFilters from '../PurchasesFilters'
 import styles from './Purchases.module.css'
 const titles ={
     seeDetails:'Ver detalles',
@@ -9,7 +9,7 @@ const titles ={
 function Purchases (){
     return (
         <div>
-            <SalesFilters/>
+            <PurchasesFilters/>
             <ListOfPurchases/>
         </div>
     )
