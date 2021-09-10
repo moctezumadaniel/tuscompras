@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { toggleProductFilters } from '../../redux/actions/productFilters'
+import { toggleSalesFilters } from '../../redux/actions/salesFilters'
 import styles from './SalesFilters.module.css'
 const titles ={
     openFilters:'Filtrar Ventas',
@@ -20,11 +20,11 @@ const titles ={
     customerNamePlaceholder:"Nombre del cliente a buscar"
 }
 function SalesFilters (){
-    const filters = useSelector(state => state.ProductFilters)
+    const filters = useSelector(state => state.SalesFilters)
     const dispatch = useDispatch()
     console.log(filters)
     const openCloseFilters = () =>{
-        dispatch(toggleProductFilters())
+        dispatch(toggleSalesFilters())
     }
     return(
         <div className={styles.FiltersContainer}>
