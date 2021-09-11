@@ -1,12 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { toggleSalesFilters } from '../../redux/actions/salesFilters'
+import { togglePurchasesFilters } from '../../redux/actions/purchasesFilters'
 import styles from './PurchasesFilters.module.css'
 const titles ={
     openFilters:'Filtrar Compras',
     applyFilters:'Aplicar y cerrar filtros',
     orderBy:'Ordenar por:',
     totalRange:'Rango de totales:',
-    ratedWith:'Calificados como',
     // ORDER BY
     latest:'Más recientes',
     oldest:'Más antiguos',
@@ -22,11 +21,11 @@ const titles ={
     customerNamePlaceholder:"Nombre del cliente a buscar"
 }
 function PurchasesFilters (){
-    const filters = useSelector(state => state.SalesFilters)
+    const filters = useSelector(state => state.PurchasesFilters)
     const dispatch = useDispatch()
     console.log(filters)
     const openCloseFilters = () =>{
-        dispatch(toggleSalesFilters())
+        dispatch(togglePurchasesFilters())
     }
     return(
         <div className={styles.FiltersContainer}>
