@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { toggleReturnsFilters } from '../../redux/actions/returnsFilters'
+import { toggleCustomersReturnsFilters } from '../../redux/actions/customerReturnsFilters'
 import styles from './CustomersReturnsFilters.module.css'
 const titles ={
     openFilters:'Filtrar Devoluciones',
@@ -21,11 +21,11 @@ const titles ={
     customerNamePlaceholder:"Nombre del cliente a buscar"
 }
 function CustomersReturnsFilters (){
-    const filters = useSelector(state => state.ReturnsFilters)
+    const filters = useSelector(state => state.CustomersReturnsFilters)
     const dispatch = useDispatch()
     console.log(filters)
     const openCloseFilters = () =>{
-        dispatch(toggleReturnsFilters())
+        dispatch(toggleCustomersReturnsFilters())
     }
     return(
         <div className={styles.FiltersContainer}>

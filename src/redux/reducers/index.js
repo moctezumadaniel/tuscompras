@@ -1,4 +1,5 @@
 import { combineReducers } from "redux"
+import { CustomersReturnsFiltersReducer } from "./CustomerReturnsFilters"
 import { MainMenuReducer } from "./MainMenu"
 import { ProductFiltersReducer } from "./ProductFilters"
 import { PurchasesFiltersReducer } from "./PurchasesFilters"
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
     SalesFilters:SalesFiltersReducer,
     PurchasesFilters:PurchasesFiltersReducer,
     ReturnsFilters:ReturnsFiltersReducer,
+    CustomersReturnsFilters:CustomersReturnsFiltersReducer,
 
 })
 
