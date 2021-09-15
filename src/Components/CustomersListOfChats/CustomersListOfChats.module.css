@@ -1,8 +1,11 @@
 .MainContainer{
     display: flex;
+    box-sizing: border-box;
     flex-direction: column;
-    width: 350px;
+    width: 400px;
+    height: 100%;
     padding: 5px;
+    overflow-y: hidden;
 }
 
 .ChatSearch{
@@ -16,9 +19,10 @@
 }
 
 .ListOfChats{
-    height: 400px;
+    display: flex;
     flex-direction: column;
-    overflow: scroll;
+    height: 100%;
+    overflow-y: scroll;
 }
 .ChatPreview{
     display: flex;

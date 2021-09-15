@@ -28,8 +28,10 @@
     }
 
 .ListOfMessages{
-    overflow: auto;
-    height: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 100%;
 }
 .MessageContainer{
     display: flex;
@@ -86,10 +88,9 @@
     .ChatHeader{
         display: none;
     }
-    .ListOfMessages{
-        height: 400px;
-    }
     .CustomerChat{
         display: flex;
+        flex-grow: 1;
+        max-width: 800px;
     }
 }
