@@ -18,7 +18,7 @@ import Sales from '../Sales'
 export default function MainScreen (){
     return(
         <Router>
-        <div className={styles.MainScreenContainer}>
+        <div className={styles.MainScreenContainer} id='Main'>
             <Navbar/>
             <MainMenu/>
             
