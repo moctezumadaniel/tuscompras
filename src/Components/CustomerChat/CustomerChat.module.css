@@ -30,8 +30,9 @@
 .ListOfMessages{
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    overflow-x: hidden;
     overflow-y: scroll;
-    height: 100%;
 }
 .MessageContainer{
     display: flex;
@@ -64,7 +65,9 @@
 
 .WriteMessage{
     display: flex;
+    box-sizing: border-box;
     padding-top: 10px;
+    margin-bottom: 10PX;
 }
 .MessageInput{
     width: 80%;
@@ -90,7 +93,10 @@
     }
     .CustomerChat{
         display: flex;
+        flex-direction: column;
         flex-grow: 1;
-        max-width: 800px;
+        height: 100%;
+        max-width: 1000px;
+        
     }
 }
