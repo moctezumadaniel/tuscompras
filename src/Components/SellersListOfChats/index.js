@@ -3,8 +3,7 @@ const titles = {
     chatSearch:'Buscar nombre del vendedor'
 }
 function SellersListOfChats(){
-    const body = document.getElementById('body')
-    body.style.overflow = 'hidden'
+
     return(
         <div className={styles.MainContainer}>
             <input type="search"

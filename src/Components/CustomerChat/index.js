@@ -1,12 +1,21 @@
+import { useDispatch, useSelector } from "react-redux"
+import { showCustomersListOfChats } from "../../redux/actions/customerChats"
 import styles from "./CustomerChat.module.css"
 const titles = {
     send:'Enviar',
 }
 function CustomerChat({name}){
+    const customerChats = useSelector(state => state.CustomerChats)
+    const dispatch = useDispatch()
+    function closeChat(){
+        dispatch(showCustomersListOfChats())
+    }
+    
     return(
-        <div className={styles.CustomerChat}>
+        <div className={customerChats.listOfChats ? styles.CustomerChat:styles.CustomerChatActive}>
             <div className={styles.ChatHeader}>
-                <button className={styles.BackButton}>
+                <button className={styles.BackButton}
+                onClick={()=>closeChat()}>
                 <i class="bi bi-arrow-left-short" style={{fontSize:"40px"}}></i>
                 </button>
                 <img width="50px" height="50px"/>

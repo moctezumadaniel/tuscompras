@@ -6,6 +6,19 @@
     
 }
 
+.CustomerChatActive{
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    max-width: 1000px;
+}
+
 .ChatHeader{
     display: flex;
     flex-direction: row;

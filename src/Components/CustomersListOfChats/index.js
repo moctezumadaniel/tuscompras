@@ -1,12 +1,14 @@
+import { useDispatch, useSelector } from 'react-redux'
+import { hideCustomersListOfChats } from '../../redux/actions/customerChats'
 import styles from './CustomersListOfChats.module.css'
 const titles = {
     chatSearch:'Buscar nombre del cliente'
 }
 function CustomersListOfChats(){
-    const body = document.getElementById('body')
-    body.style.overflow = 'hidden'
+    const customerChats = useSelector(state => state.CustomerChats)
+    
     return(
-        <div className={styles.MainContainer}>
+        <div className={customerChats.listOfChats ? styles.MainContainer: styles.MainContainerHided}>
             <input type="search"
             className={styles.ChatSearch}
             placeholder={titles.chatSearch}/>
@@ -14,6 +16,7 @@ function CustomersListOfChats(){
 
         </div>
     )
+  
 }
 export default CustomersListOfChats
 
@@ -86,8 +89,13 @@ function ListOfChats(){
 }
 
 function ChatPreview({name, lastMessage}){
+    const dispatch = useDispatch()
+    function selectChat(){
+        if(window.innerWidth < 750)
+        dispatch(hideCustomersListOfChats())
+    }
     return(
-        <div>
+        <div onClick={()=>selectChat()}>
             <div className={styles.ChatPreview}>
             <img width="50" height="50"/>
                 <div className={styles.ChatDescription}>
