@@ -16,7 +16,7 @@ const rootReducer = combineReducers({
     ReturnsFilters:ReturnsFiltersReducer,
     CustomersReturnsFilters:CustomersReturnsFiltersReducer,
     CustomerChats:CustomerChatsReducer,
-    SellerChatsReducer:SellerChatsReducer
+    SellerChats:SellerChatsReducer
 
 })
 
