@@ -6,6 +6,7 @@ import { ProductFiltersReducer } from "./ProductFilters"
 import { PurchasesFiltersReducer } from "./PurchasesFilters"
 import { ReturnsFiltersReducer } from "./ReturnsFilters"
 import { SalesFiltersReducer } from "./SalesFilters"
+import { SellerChatsReducer } from "./SellersChats"
 
 const rootReducer = combineReducers({
     MainMenu:MainMenuReducer,
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
     ReturnsFilters:ReturnsFiltersReducer,
     CustomersReturnsFilters:CustomersReturnsFiltersReducer,
     CustomerChats:CustomerChatsReducer,
+    SellerChatsReducer:SellerChatsReducer
 
 })
 
