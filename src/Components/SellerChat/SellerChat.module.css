@@ -51,6 +51,7 @@
     flex-direction: column;
 }
     .Message{
+        word-wrap: break-word;
         align-self:flex-start;
         font-size: large;
         background-color: #F5F5F5;
@@ -63,6 +64,7 @@
     }
 
     .UserMessage{
+        word-wrap: break-word;
         align-self:flex-end;
         font-size: large;
         background-color: #1978F0;
