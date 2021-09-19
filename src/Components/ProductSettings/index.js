@@ -7,7 +7,8 @@ const titles = {
     delete:"Eliminar",
     change:"Cambiar",
     addImage:"Agregar Imágen",
-    completeDescription:"Descripción completa del producto"
+    completeDescription:"Descripción completa del producto",
+    saveProduct:'Guardar producto'
 }
 function ProductSettings(){
     return(
@@ -28,6 +29,11 @@ function ProductSettings(){
                 className={styles.CompleteDescription}/>
             </div>
             
+            <div className={styles.SaveProductContainer}>
+                <button className={styles.SaveProduct}>
+                    {titles.saveProduct}
+                </button>
+            </div>
         </div>
     )
 }
@@ -67,7 +73,6 @@ function ProductImages(){
                     </div>
                 </div>
             </div>
-            
             
         </div>
     )

@@ -107,7 +107,23 @@
     resize: none;
     outline-color: black;
 }
-
+.SaveProductContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    padding-top: 0;
+}
+.SaveProduct{
+    font-size: larger;
+    padding: 5px;
+    width: 98%;
+    background-color: #1978F0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 @media (max-width:400px) {
     .ImageContainer{
         width: 95%;
