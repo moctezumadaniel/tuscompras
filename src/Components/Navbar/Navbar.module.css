@@ -43,7 +43,9 @@
 }
 
 .SellProductButton{
+    font-family: inherit;
     font-size: larger;
+    text-decoration: none;
     color: white;
     background-color: #1978F0;
     border: none;
@@ -55,12 +57,10 @@
     cursor: pointer;
 }
 
-.SellProductLink{
-    text-decoration: none;
-    color: white;
-}
 
 .LogInAndOut{
+    text-decoration: none;
+    font-family: inherit;
     font-size: larger;
     color: white;
     background-color: #000000;

@@ -37,12 +37,12 @@ export default function MainMenu (){
         <Router>
         <div className={menuStatus === 'opened'? styles.menuContainer: styles.menuContainerHided}>
            <ul className={menuStatus === 'opened'? styles.menuCanvas: styles.menuCanvasHided}>
-               <button className={styles.SellProductButton}>
-                   <a className={styles.SellProductLink} href="/vender">
-                        {titles.sell}
-                   </a>
+               
+                <a className={styles.SellProductButton} href="/vender">
+                    {titles.sell}
+                </a>
                    
-                </button>
+                
                 <li>
                     <h3>{titles.sales}</h3>
                 </li>

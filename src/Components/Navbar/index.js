@@ -1,7 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { setMainMenuToClose, setMainMenuToOpen } from '../../redux/actions/mainMenu'
 import styles from './Navbar.module.css'
+const titles = {
+    sell:'Vender mi producto',
+    login: 'Iniciar sesion'
+}
 
 export default function Navbar (){
     return(
@@ -16,15 +19,15 @@ export default function Navbar (){
             className={styles.SearchBar}
             placeholder="Buscar"/>
             
-            <button className={styles.SellProductButton}>
-               <a className={styles.SellProductLink} href="vender">
-               Vender mi producto
-               </a> 
-            </button>
+       
+            <a className={styles.SellProductButton} href="vender">
+            {titles.sell}
+            </a>
+            
 
-            <button className={styles.LogInAndOut}>
-                Iniciar sesion
-            </button>
+            <a className={styles.LogInAndOut}>
+                {titles.login}
+            </a>
         </div>
     )
 }

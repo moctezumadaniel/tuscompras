@@ -35,6 +35,7 @@
     align-content: left;
     padding: 0;
     padding-left: 30px;
+    padding-top: 10px;
     margin: 0;
     top: 60px;
     bottom: 0;
@@ -58,6 +59,7 @@
     align-content: left;
     padding: 0;
     padding-left: 30px;
+    padding-top: 10px;
     margin: 0;
     top: 60px;
     bottom: 0;
@@ -73,6 +75,8 @@
 }
 
 .SellProductButton{
+    font-family: inherit;
+    text-decoration: none;
     font-size: larger;
     color: white;
     background-color: #1978F0;
@@ -86,10 +90,7 @@
     outline-color: black;
 
 }
-.SellProductLink{
-    text-decoration: none;
-    color: white;
-}
+
 
 li{
     text-decoration: none;
