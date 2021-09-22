@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import ProductPreview from '../ProductPreview'
+import PurchasePreview from '../PurchasePreview'
 import PurchasesFilters from '../PurchasesFilters'
 import styles from './Purchases.module.css'
 const titles ={
@@ -51,12 +51,12 @@ function Purchase({details}){
             </div>
             {detailsStatus ?
             <div className={styles.PurchaseDetails}>
-            <ProductPreview 
+            <PurchasePreview 
             title="ejemplo largo de la descripcion de un producto"
             price="50000"
             review="10/10"/>
 
-            <ProductPreview 
+            <PurchasePreview 
             title="ejemplo largo de la descripcion de un producto"
             price="50000"
             review="10/10"/>
