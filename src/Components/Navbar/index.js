@@ -17,7 +17,7 @@ export default function Navbar (){
             placeholder="Buscar"/>
             
             <button className={styles.SellProductButton}>
-               <a className={styles.SellProductLink} href="sell">
+               <a className={styles.SellProductLink} href="vender">
                Vender mi producto
                </a> 
             </button>

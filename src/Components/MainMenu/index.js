@@ -38,7 +38,7 @@ export default function MainMenu (){
         <div className={menuStatus === 'opened'? styles.menuContainer: styles.menuContainerHided}>
            <ul className={menuStatus === 'opened'? styles.menuCanvas: styles.menuCanvasHided}>
                <button className={styles.SellProductButton}>
-                   <a className={styles.SellProductLink} href="/sell">
+                   <a className={styles.SellProductLink} href="/vender">
                         {titles.sell}
                    </a>
                    
@@ -48,25 +48,25 @@ export default function MainMenu (){
                 </li>
                
                <li>
-                    <a className={styles.link} href="/products"
+                    <a className={styles.link} href="/productos"
                     onClick={()=>closeMainMenu()}>
                       {titles.products}
                     </a>
                 </li>
                <li>
-                    <a className={styles.link} href="/sales"
+                    <a className={styles.link} href="/ventas"
                     onClick={()=>closeMainMenu()}>
                         {titles.salesList}
                     </a>
                 </li>
                <li>
-                    <a className={styles.link} href="/customersReturns"
+                    <a className={styles.link} href="/devoluciones-de-clientes"
                     onClick={()=>closeMainMenu()}>
                         {titles.buyersReturns}
                     </a>
                 </li>
                <li>
-                    <a className={styles.link} href="/customersMessages"
+                    <a className={styles.link} href="/mensajes-de-clientes"
                     onClick={()=>closeMainMenu()}>
                         {titles.buyersMessages}
                     </a>
@@ -77,19 +77,19 @@ export default function MainMenu (){
                 </li>
                
                <li>
-                   <a className={styles.link} href="/purchases"
+                   <a className={styles.link} href="/compras"
                    onClick={()=>closeMainMenu()}>
                        {titles.purchasesList}
                     </a>
                 </li>
                <li>
-                   <a className={styles.link} href="/returns"
+                   <a className={styles.link} href="/devoluciones"
                    onClick={()=>closeMainMenu()}>
                        {titles.returns}
                     </a>
                 </li>
                <li>
-                   <a className={styles.link} href="/sellersMessages"
+                   <a className={styles.link} href="/mensajes-de-vendedores"
                    onClick={()=>closeMainMenu()}>
                        {titles.sellersMessages}
                     </a>
@@ -99,13 +99,13 @@ export default function MainMenu (){
                 </li>
                
                <li>
-                   <a className={styles.link} href="/profile"
+                   <a className={styles.link} href="/perfil"
                    onClick={()=>closeMainMenu()}>
                        {titles.profileName}
                     </a>
                 </li>
                <li>
-                   <a className={styles.link} href="/security"
+                   <a className={styles.link} href="/seguridad"
                    onClick={()=>closeMainMenu()}>
                        {titles.security}
                     </a>

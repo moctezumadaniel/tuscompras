@@ -25,43 +25,43 @@ export default function MainScreen (){
 
                     
                     
-                    <Route path="/products">
+                    <Route path="/productos">
                         <UserProducts/>
                     </Route>
                         
-                    <Route path="/customersReturns">
+                    <Route path="/devoluciones-de-clientes">
                         <CustomersReturns/>
                     </Route>
                         
-                    <Route path="/customersMessages">
+                    <Route path="/mensajes-de-clientes">
                         <CustomersMessages/>
                     </Route>
 
-                    <Route path="/purchases">
+                    <Route path="/compras">
                         <Purchases/>
                     </Route>
 
-                    <Route path="/returns">
+                    <Route path="/devoluciones">
                         <Returns/>
                     </Route>
 
-                    <Route path="/sellersMessages">
+                    <Route path="/mensajes-de-vendedores">
                         <SellersMessages/>
                     </Route>
 
-                    <Route path="/profile">
+                    <Route path="/perfil">
                         <Profile/>
                     </Route>
 
-                    <Route path="/security">
+                    <Route path="/seguridad">
                         <Security/>
                     </Route>
                     
-                    <Route path="/sales">
+                    <Route path="/ventas">
                         <Sales/>
                     </Route>
 
-                    <Route path="/sell">
+                    <Route path="/vender">
                         <ProductSettings/>
                     </Route>
 
