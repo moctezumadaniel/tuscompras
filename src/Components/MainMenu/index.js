@@ -105,12 +105,6 @@ export default function MainMenu (){
                     </a>
                 </li>
                <li>
-                   <a className={styles.link} href="/addresses"
-                   onClick={()=>closeMainMenu()}>
-                       {titles.addresses}
-                    </a>
-                </li>
-               <li>
                    <a className={styles.link} href="/security"
                    onClick={()=>closeMainMenu()}>
                        {titles.security}

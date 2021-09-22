@@ -10,7 +10,6 @@ import Purchases from '../Purchases'
 import Returns from '../Returns'
 import SellersMessages from '../SellersMessages'
 import Profile from '../Profile'
-import Addresses from '../Addresses'
 import Security from '../Security'
 import ProductSettings from '../ProductSettings'
 import Sales from '../Sales'
@@ -52,10 +51,6 @@ export default function MainScreen (){
 
                     <Route path="/profile">
                         <Profile/>
-                    </Route>
-
-                    <Route path="/addresses">
-                        <Addresses/>
                     </Route>
 
                     <Route path="/security">
