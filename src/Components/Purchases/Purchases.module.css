@@ -24,8 +24,9 @@
         }
 
         .PurchaseButtonDetails{
+            font-family: 'Roboto';
             font-size: large;
-            font-weight: 600;
+            font-weight: 500;
             align-self:flex-end;
             justify-self:right;
             align-content: flex-end;
