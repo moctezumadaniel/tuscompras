@@ -1,0 +1,112 @@
+.MainDetails{
+    padding: 5px;
+    margin-bottom: 20px;
+}
+    .Images{
+        width: 100%;
+        height: 200px;
+    }
+
+        .Images img{
+            background-color: beige;
+            flex-shrink: 0;
+            min-width: 100%;
+            min-height: 100%;
+            background-color:gray;
+        }
+
+    .Buttons{
+        display: flex;
+        padding-top: 10px;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+
+        .Buy{
+            font-size: large;
+            font-weight: 500;
+            padding: 5px;
+            width: 49%;
+            background-color: #1978F0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .Contact{
+            font-size: large;
+            padding: 10px;
+            width: 49%;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    .ShortDescription{
+        padding-top: 5px;
+        font-size: larger;
+    }
+
+    .Amounth{
+        padding-top: 10px;
+        font-size: larger;
+        color: #1978F0;
+    }
+
+.CommentsContainer{
+    display: flex;
+    padding: 5px;
+}
+
+    .CommentsSummary{
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    }
+
+        .CommentsHeader{
+            margin-bottom: 10px;
+        }
+
+            .Review{
+                font-size: larger;
+                font-weight: 500;
+                color: #41B22E;
+                margin-right: 10px;
+            }
+
+            .NoComments{
+                font-size: medium;
+                font-weight: 300;
+            }
+
+        .FeaturedComment{
+            margin-bottom: 10px;
+        }
+
+        .OpenCommentsContainer{
+            display: flex;
+            align-content: flex-end;
+            justify-content: right;
+        }
+
+            .OpenComments{
+                font-weight: 500;
+                cursor: pointer;
+            }
+
+
+.CompleteDescriptionCotainer{
+    display: flex;
+    padding: 5px;
+}
+    .CompleteDescription{
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    }

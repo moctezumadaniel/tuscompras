@@ -1,3 +1,4 @@
+import styles from './ProductPage.module.css'
 const titles = {
     buy:'Comprar',
     contact:'Contactar',
@@ -32,23 +33,27 @@ export default ProductPage
 function MainDetails(){
     //Images, short description, price, buy and contact button
     return(
-        <div>
+        <div className={styles.MainDetails}>
 
-            <div>
+            <div className={styles.Images}>
                 <img/>
             </div>
 
-            <div>
-                <button>
+            <div className={styles.Buttons}>
+                <button className={styles.Buy}>
                     {titles.buy}
                 </button>
-                <button>
+                <button className={styles.Contact}>
                     {titles.contact}
                 </button>
             </div>
 
-            <div>
+            <div className={styles.ShortDescription}>
+                {titles.shortDescription}
+            </div>
 
+            <div className={styles.Amounth}>
+                {titles.amounth}
             </div>
         </div>
     )
@@ -56,23 +61,27 @@ function MainDetails(){
 
 function CommentsSummary(){
     return(
-        <div>
-            <div>
-                <span>
-                    {titles.review}
-                </span>
+        <div className={styles.CommentsContainer}>
+            <div className={styles.CommentsSummary}>
+                <div className={styles.CommentsHeader}>
+                    <span className={styles.Review}>
+                        {titles.review}
+                    </span>
 
-                <span>
-                    {`${titles.noComments} ${comments}`}
-                </span>
-            </div>
+                    <span className={styles.NoComments}>
+                        {`${titles.noComments} ${titles.comments}`}
+                    </span>
+                </div>
 
-            <div>
-                {titles.featuredComment}
-            </div>
+                <div className={styles.FeaturedComment}>
+                    {titles.featuredComment}
+                </div>
 
-            <div>
-                <a>{titles.openComments}</a>
+                <div className={styles.OpenCommentsContainer}>
+                    <a className={styles.OpenComments}>
+                        {titles.openComments}
+                    </a>
+                </div>
             </div>
         </div>
     )
@@ -80,8 +89,8 @@ function CommentsSummary(){
 
 function FullDescription(){
     return (
-        <div>
-            <div>
+        <div className={styles.CompleteDescriptionCotainer}>
+            <div className={styles.CompleteDescription}>
                 {titles.fullDescription}
             </div>
         </div>

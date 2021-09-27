@@ -13,6 +13,7 @@ import Profile from '../Profile'
 import Security from '../Security'
 import ProductSettings from '../ProductSettings'
 import Sales from '../Sales'
+import ProductPage from '../ProductPage'
 
 export default function MainScreen (){
     return(
@@ -63,6 +64,10 @@ export default function MainScreen (){
 
                     <Route path="/vender">
                         <ProductSettings/>
+                    </Route>
+
+                    <Route path="/producto">
+                        <ProductPage/>
                     </Route>
 
                     <Route path="/">
