@@ -1,6 +1,14 @@
+.FullContainer{
+    display: block;
+}
+
+.LeftContainer{
+    width: 100%;
+}
 .MainDetails{
     padding: 5px;
     margin-bottom: 20px;
+    max-width: 400px;
 }
     .Images{
         width: 100%;
@@ -100,7 +108,7 @@
             }
 
 
-.CompleteDescriptionCotainer{
+.CompleteDescriptionContainer{
     display: flex;
     padding: 5px;
 }
@@ -109,4 +117,15 @@
         padding: 10px;
         border-radius: 5px;
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    @media (min-width:750px) {
+        .FullContainer{
+            display: flex;
+        }
+        .LeftContainer{
+            min-width: 400px;
+            max-width: 400px;
+        }
+        
     }

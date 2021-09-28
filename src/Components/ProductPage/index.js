@@ -17,8 +17,8 @@ const titles = {
 }
 function ProductPage(){
     return (
-        <div>
-            <div>
+        <div className={styles.FullContainer}>
+            <div className={styles.LeftContainer}>
                 <MainDetails/>
                 <CommentsSummary/>
             </div>
@@ -89,9 +89,10 @@ function CommentsSummary(){
 
 function FullDescription(){
     return (
-        <div className={styles.CompleteDescriptionCotainer}>
+        <div className={styles.CompleteDescriptionContainer}>
             <div className={styles.CompleteDescription}>
                 {titles.fullDescription}
+                
             </div>
         </div>
     )
