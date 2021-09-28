@@ -7,6 +7,8 @@ const titles = {
 }
 
 export default function Navbar (){
+    const navbarState = useSelector(state => state.Navbar)
+    const searchState = navbarState.activeSearch
     return(
         <div className={styles.NavbarContainer}>          
             <MenuButton/>
@@ -16,6 +18,7 @@ export default function Navbar (){
             </a>
            
             <input type='search' 
+            
             className={styles.SearchBar}
             placeholder="Buscar"/>
             

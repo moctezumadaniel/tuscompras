@@ -2,6 +2,7 @@ import { combineReducers } from "redux"
 import { CustomerChatsReducer } from "./CustomerChats"
 import { CustomersReturnsFiltersReducer } from "./CustomerReturnsFilters"
 import { MainMenuReducer } from "./MainMenu"
+import { NavbarReducer } from "./Navbar"
 import { ProductFiltersReducer } from "./ProductFilters"
 import { PurchasesFiltersReducer } from "./PurchasesFilters"
 import { ReturnsFiltersReducer } from "./ReturnsFilters"
@@ -16,7 +17,8 @@ const rootReducer = combineReducers({
     ReturnsFilters:ReturnsFiltersReducer,
     CustomersReturnsFilters:CustomersReturnsFiltersReducer,
     CustomerChats:CustomerChatsReducer,
-    SellerChats:SellerChatsReducer
+    SellerChats:SellerChatsReducer,
+    Navbar:NavbarReducer,
 
 })
 
