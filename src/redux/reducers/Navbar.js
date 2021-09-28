@@ -18,5 +18,7 @@ export const NavbarReducer =(state=initialState, action)=>{
                 ...state,
                 activeSearch:false
             }
+        default:
+            return state
     }
 }

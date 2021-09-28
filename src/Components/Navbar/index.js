@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { setMainMenuToClose, setMainMenuToOpen } from '../../redux/actions/mainMenu'
+import { activateProductSearch, deactivateProductSearch } from '../../redux/actions/navbar'
 import styles from './Navbar.module.css'
 const titles = {
     sell:'Vender mi producto',
@@ -9,17 +10,26 @@ const titles = {
 export default function Navbar (){
     const navbarState = useSelector(state => state.Navbar)
     const searchState = navbarState.activeSearch
+    const dispatch = useDispatch()
+    function activateSearch(){
+        dispatch(activateProductSearch())
+    }
+    function deactivateSearch(){
+        dispatch(deactivateProductSearch())
+    }
     return(
         <div className={styles.NavbarContainer}>          
             <MenuButton/>
 
-            <a className={styles.Logo} href="/">
+            <a className={searchState ? styles.LogoSA: styles.Logo} 
+            href="/">
                 TusCompras
             </a>
            
             <input type='search' 
-            
-            className={styles.SearchBar}
+            onFocus={()=>activateSearch()}
+            onBlur={()=>deactivateSearch()}
+            className={searchState ?  styles.SearchBarSA: styles.SearchBar}
             placeholder="Buscar"/>
             
        
@@ -37,6 +47,8 @@ export default function Navbar (){
 
 function MenuButton(){
     const menuStatus = useSelector(state => state.MainMenu.status)
+    const navbarState = useSelector(state => state.Navbar)
+    const searchState = navbarState.activeSearch
     const body = document.getElementById('body')
     const dispatch = useDispatch()
     const openMainMenu = () =>{
@@ -49,7 +61,7 @@ function MenuButton(){
     }
     if(menuStatus === 'opened'){
         return(
-        <button className={styles.MainMenuButton}
+        <button className={searchState ? styles.MainMenuButtonSA: styles.MainMenuButton}
         onClick={()=>closeMainMenu()}>
             <i class="bi bi-x" 
             style={{fontSize: '40px'}}>
@@ -57,7 +69,7 @@ function MenuButton(){
         </button>
         )
     }else return(
-        <button className={styles.MainMenuButton}
+        <button className={searchState ? styles.MainMenuButtonSA: styles.MainMenuButton}
         onClick={()=>openMainMenu()}>
             <i class="bi bi-list MainMenuIcon" 
             style={{fontSize: '40px'}}>
