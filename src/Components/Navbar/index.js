@@ -10,8 +10,13 @@ const titles = {
 export default function Navbar (){
     const navbarState = useSelector(state => state.Navbar)
     const searchState = navbarState.activeSearch
+    const menuStatus = useSelector(state => state.MainMenu.status)
     const dispatch = useDispatch()
     function activateSearch(){
+        
+        if(menuStatus === 'opened'){
+            dispatch(setMainMenuToClose())
+        }
         dispatch(activateProductSearch())
     }
     function deactivateSearch(){
@@ -47,8 +52,6 @@ export default function Navbar (){
 
 function MenuButton(){
     const menuStatus = useSelector(state => state.MainMenu.status)
-    const navbarState = useSelector(state => state.Navbar)
-    const searchState = navbarState.activeSearch
     const body = document.getElementById('body')
     const dispatch = useDispatch()
     const openMainMenu = () =>{
@@ -61,7 +64,7 @@ function MenuButton(){
     }
     if(menuStatus === 'opened'){
         return(
-        <button className={searchState ? styles.MainMenuButtonSA: styles.MainMenuButton}
+        <button className={styles.MainMenuButton}
         onClick={()=>closeMainMenu()}>
             <i class="bi bi-x" 
             style={{fontSize: '40px'}}>
@@ -69,7 +72,7 @@ function MenuButton(){
         </button>
         )
     }else return(
-        <button className={searchState ? styles.MainMenuButtonSA: styles.MainMenuButton}
+        <button className={styles.MainMenuButton}
         onClick={()=>openMainMenu()}>
             <i class="bi bi-list MainMenuIcon" 
             style={{fontSize: '40px'}}>

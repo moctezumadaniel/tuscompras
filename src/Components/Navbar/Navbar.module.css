@@ -42,13 +42,6 @@
 
 }
 /* SA = Search Active */
-.MainMenuButtonSA{
-    margin-right: 0;
-    background-color: white;
-    border: none;
-    cursor: pointer;
-    outline-color: black;
-}
 .LogoSA{
     font-size: xx-large;
     font-weight: 700;
@@ -115,9 +108,6 @@
 }
 
 @media (max-width:400px) {
-    .MainMenuButtonSA{
-        display: none;
-    }
     .LogoSA{
         display: none;
     }
