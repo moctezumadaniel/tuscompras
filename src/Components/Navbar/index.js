@@ -43,7 +43,7 @@ export default function Navbar (){
             </a>
             
 
-            <a className={styles.LogInAndOut}>
+            <a className={styles.LogInAndOut} href="iniciar-sesion">
                 {titles.login}
             </a>
         </div>
