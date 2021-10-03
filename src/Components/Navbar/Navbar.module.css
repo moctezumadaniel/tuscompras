@@ -1,125 +1,120 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap');
-.NavbarContainer{
-    display: flex;
-    padding: 5px;
-    padding-left: 0;
-    min-width: none;   
-    align-content: center;
-    align-items: center; 
-    vertical-align: middle;
-    top: -1px;
-    
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap");
+.NavbarContainer {
+  display: flex;
+  padding: 5px;
+  padding-left: 0;
+  min-width: none;
+  align-content: center;
+  align-items: center;
+  vertical-align: middle;
+  top: -1px;
 }
 
-.MainMenuButton{
-    margin-right: 0;
-    background-color: white;
-    border: none;
-    cursor: pointer;
-    outline-color: black;
+.MainMenuButton {
+  margin-right: 0;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  outline-color: black;
 }
-.Logo{
-    font-size: xx-large;
-    font-weight: 700;
-    font-family: 'Baloo Thambi 2';
-    margin-right: 10px;
-    text-decoration: none;
-    color: black;
-    
-    outline-color: black;
-    outline-width: 2px;
-    outline-offset: 2px;
-    
-}
-.SearchBar{
-    width: 100%;
-    max-width: 500px;
-    font-size: larger;
-    border: none;
-    border-radius: 30px;
-    outline: none;
-    padding: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
+.Logo {
+  font-size: xx-large;
+  font-weight: 700;
+  font-family: "Baloo Thambi 2";
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
 
+  outline-color: black;
+  outline-width: 2px;
+  outline-offset: 2px;
+}
+.SearchBar {
+  width: 100%;
+  max-width: 500px;
+  font-size: larger;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  padding: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
 }
 /* SA = Search Active */
-.LogoSA{
-    font-size: xx-large;
-    font-weight: 700;
-    font-family: 'Baloo Thambi 2';
-    margin-right: 10px;
-    outline:#000000;
-    text-decoration: none;
-    color: black;
+.LogoSA {
+  font-size: xx-large;
+  font-weight: 700;
+  font-family: "Baloo Thambi 2";
+  margin-right: 10px;
+  outline: #000000;
+  text-decoration: none;
+  color: black;
 }
-.SearchBarSA{
-    width: 100%;
-    max-width: 500px;
-    font-size: larger;
-    border: none;
-    border-radius: 30px;
-    outline: none;
-    padding: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
-}
-
-.SellProductButton{
-    font-family: inherit;
-    font-size: larger;
-    text-decoration: none;
-    color: white;
-    background-color: #1978F0;
-    border: none;
-    margin-left: 10px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 20px;
-    cursor: pointer;
+.SearchBarSA {
+  width: 100%;
+  max-width: 500px;
+  font-size: larger;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  padding: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
 }
 
-
-.LogInAndOut{
-    text-decoration: none;
-    font-family: inherit;
-    font-size: larger;
-    color: white;
-    background-color: #000000;
-    border: none;
-    margin-left: 10px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 20px;
-    cursor: pointer;
-
-    outline-color: #1978F0;
-    outline-offset: 3px;
-    outline-width: 3px;
+.SellProductButton {
+  font-family: inherit;
+  font-size: larger;
+  text-decoration: none;
+  color: white;
+  background-color: #1978f0;
+  border: none;
+  margin-left: 10px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
-@media (max-width:1090px) {
-    .LogInAndOut{
-        display: none;
-    }
+.LogInAndOut {
+  text-decoration: none;
+  font-family: inherit;
+  font-size: larger;
+  color: white;
+  background-color: #000000;
+  border: none;
+  margin-left: 10px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+
+  outline-color: #1978f0;
+  outline-offset: 3px;
+  outline-width: 3px;
 }
 
-@media (max-width:945px) {
-    .SellProductButton{
-        display: none;
-    }
+@media (max-width: 1090px) {
+  .LogInAndOut {
+    display: none;
+  }
 }
 
-@media (max-width:400px) {
-    .LogoSA{
-        display: none;
-    }
-    .SearchBarSA{
-        box-shadow: none;
-    }
+@media (max-width: 945px) {
+  .SellProductButton {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .LogoSA {
+    display: none;
+  }
+  .SearchBarSA {
+    box-shadow: none;
+  }
 }
