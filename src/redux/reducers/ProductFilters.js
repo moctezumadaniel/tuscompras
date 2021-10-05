@@ -30,6 +30,26 @@ export const ProductFiltersReducer = (state = initialState, action) => {
         };
       }
       break;
+    case "CHANGE_PRODUCT_FILTERS_ORDER":
+      return {
+        ...state,
+        orderBy: action.order,
+      };
+    case "CHANGE_PRODUCT_FILTERS_PRICE_FROM":
+      return {
+        ...state,
+        priceFrom: action.price,
+      };
+    case "CHANGE_PRODUCT_FILTERS_PRICE_TO":
+      return {
+        ...state,
+        priceTo: action.price,
+      };
+    case "CHANGE_PRODUCT_FILTERS_RATED_WITH":
+      return {
+        ...state,
+        ratedWith: action.rating,
+      };
     default:
       return state;
   }
