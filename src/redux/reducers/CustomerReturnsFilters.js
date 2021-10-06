@@ -35,6 +35,36 @@ export const CustomersReturnsFiltersReducer = (
         };
       }
       break;
+    case "CHANGE_CUSTOMER_RETURNS_FILTERS_ORDER":
+      return {
+        ...state,
+        orderBy: action.order,
+      };
+    case "CHANGE_CUSTOMER_RETURNS_FILTERS_MIN_TOTAL":
+      return {
+        ...state,
+        minTotal: action.total,
+      };
+    case "CHANGE_CUSTOMER_RETURNS_FILTERS_MAX_TOTAL":
+      return {
+        ...state,
+        maxTotal: action.total,
+      };
+    case "CHANGE_CUSTOMER_RETURNS_FILTERS_INITIAL_DATE":
+      return {
+        ...state,
+        initialDate: action.date,
+      };
+    case "CHANGE_CUSTOMER_RETURNS_FILTERS_FINAL_DATE":
+      return {
+        ...state,
+        finalDate: action.date,
+      };
+    case "CHANGE_CUSTOMER_RETURNS_FILTERS_CUSTOMER_NAME":
+      return {
+        ...state,
+        customerName: action.name,
+      };
     default:
       return state;
   }
