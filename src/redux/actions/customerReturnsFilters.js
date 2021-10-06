@@ -53,7 +53,7 @@ export const changeCustomerReturnsFiltersFinalDate = (date) => {
 
 export const changeCustomerReturnsFiltersCustomerName = (name) => {
   return {
-    type: "CHANGE_CUSTOMER_RETURNS_FILTERS_CUSTOMER_NAME",
+    type: "CHANGE_CUSTOMER_RETURNS_FILTERS_NAME",
     name,
   };
 };

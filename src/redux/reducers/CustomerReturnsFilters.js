@@ -60,7 +60,7 @@ export const CustomersReturnsFiltersReducer = (
         ...state,
         finalDate: action.date,
       };
-    case "CHANGE_CUSTOMER_RETURNS_FILTERS_CUSTOMER_NAME":
+    case "CHANGE_CUSTOMER_RETURNS_FILTERS_NAME":
       return {
         ...state,
         customerName: action.name,
