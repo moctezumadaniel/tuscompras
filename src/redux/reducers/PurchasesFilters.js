@@ -32,6 +32,36 @@ export const PurchasesFiltersReducer = (state = initialState, action) => {
         };
       }
       break;
+    case "CHANGE_PURCHASES_FILTERS_ORDER":
+      return {
+        ...state,
+        orderBy: action.order,
+      };
+    case "CHANGE_PURCHASES_FILTERS_MIN_TOTAL":
+      return {
+        ...state,
+        minTotal: action.total,
+      };
+    case "CHANGE_PURCHASES_FILTERS_MAX_TOTAL":
+      return {
+        ...state,
+        maxTotal: action.total,
+      };
+    case "CHANGE_PURCHASES_FILTERS_INITIAL_DATE":
+      return {
+        ...state,
+        initialDate: action.date,
+      };
+    case "CHANGE_PURCHASES_FILTERS_FINAL_DATE":
+      return {
+        ...state,
+        finalDate: action.date,
+      };
+    case "CHANGE_PURCHASES_FILTERS_SELLER_NAME":
+      return {
+        ...state,
+        sellerName: action.name,
+      };
     default:
       return state;
   }
