@@ -1,5 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
-import { toggleSalesFilters } from "../../redux/actions/salesFilters";
+import {
+  changeSalesFiltersCustomerName,
+  changeSalesFiltersFinalDate,
+  changeSalesFiltersInitialDate,
+  changeSalesFiltersMaxTotal,
+  changeSalesFiltersMinTotal,
+  changeSalesFiltersOrder,
+  toggleSalesFilters,
+} from "../../redux/actions/salesFilters";
 import styles from "./SalesFilters.module.css";
 const titles = {
   openFilters: "Filtrar Ventas",
@@ -44,17 +52,36 @@ function SalesFilters() {
 export default SalesFilters;
 
 function ListOfFilters({ filters }) {
+  const dispatch = useDispatch();
+  function changeOrder(event) {
+    dispatch(changeSalesFiltersOrder(event.target.value));
+  }
+  function changeMinTotal(event) {
+    dispatch(changeSalesFiltersMinTotal(event.target.value));
+  }
+  function changeMaxTotal(event) {
+    dispatch(changeSalesFiltersMaxTotal(event.target.value));
+  }
+  function changeInitialDate(event) {
+    dispatch(changeSalesFiltersInitialDate(event.target.value));
+  }
+  function changeFinalDate(event) {
+    dispatch(changeSalesFiltersFinalDate(event.target.value));
+  }
+  function changeCustomerName(event) {
+    dispatch(changeSalesFiltersCustomerName(event.target.value));
+  }
   if (filters.status === "opened")
     return (
       <div className={styles.ListOfFilters}>
         {/* ORDER */}
         <div className={styles.OrderContainer}>
           <div className={styles.FilterTitle}>{titles.orderBy}</div>
-          <select className={styles.SelectInput}>
-            <option>{titles.latest}</option>
-            <option>{titles.oldest}</option>
-            <option>{titles.greatestTotal}</option>
-            <option>{titles.lowestTotal}</option>
+          <select className={styles.SelectInput} onChange={changeOrder}>
+            <option value="latest">{titles.latest}</option>
+            <option value="oldest">{titles.oldest}</option>
+            <option value="greatestTotal">{titles.greatestTotal}</option>
+            <option value="lowestTotal">{titles.lowestTotal}</option>
           </select>
         </div>
         {/* TOTAL */}
@@ -64,11 +91,15 @@ function ListOfFilters({ filters }) {
           <input
             className={styles.AmounthInput}
             placeholder={titles.minTotal}
+            onChange={changeMinTotal}
+            value={filters.minTotal}
             type="number"
           />
           <input
             className={styles.AmounthInput}
             placeholder={titles.maxTotal}
+            onChange={changeMaxTotal}
+            value={filters.maxTotal}
             type="number"
           />
         </div>
@@ -79,21 +110,27 @@ function ListOfFilters({ filters }) {
           <input
             className={styles.DatesInput}
             placeholder={titles.minTotal}
+            onChange={changeInitialDate}
+            value={filters.initialDate}
             type="date"
           />
           <input
             className={styles.DatesInput}
             placeholder={titles.maxTotal}
+            onChange={changeFinalDate}
+            value={filters.finalDate}
             type="date"
           />
         </div>
-        {/* RATING */}
+        {/* CUSTOMER NAME */}
         <div className={styles.RatingContainer}>
           <div className={styles.FilterTitle}>{titles.customerName}</div>
           <input
-            type="search"
+            type="text"
             className={styles.SearchInput}
             placeholder={titles.customerNamePlaceholder}
+            onChange={changeCustomerName}
+            value={filters.customerName}
           />
         </div>
       </div>

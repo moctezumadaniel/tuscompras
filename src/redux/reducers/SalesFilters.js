@@ -60,7 +60,7 @@ export const SalesFiltersReducer = (state = initialState, action) => {
     case "CHANGE_SALES_FILTERS_CUSTOMER_NAME":
       return {
         ...state,
-        customerName: action.name,
+        customerName: action.customerName,
       };
     default:
       return state;

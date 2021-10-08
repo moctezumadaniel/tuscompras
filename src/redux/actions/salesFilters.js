@@ -51,9 +51,9 @@ export const changeSalesFiltersFinalDate = (date) => {
   };
 };
 
-export const changeSalesFiltersCustomerName = (name) => {
+export const changeSalesFiltersCustomerName = (customerName) => {
   return {
     type: "CHANGE_SALES_FILTERS_CUSTOMER_NAME",
-    name,
+    customerName,
   };
 };
