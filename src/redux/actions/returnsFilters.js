@@ -51,7 +51,7 @@ export const changeReturnsFiltersFinalDate = (date) => {
   };
 };
 
-export const changeReturnsFiltersName = (name) => {
+export const changeReturnsFiltersSellerName = (name) => {
   return {
     type: "CHANGE_RETURNS_FILTERS_NAME",
     name,
