@@ -1,160 +1,154 @@
-.menuContainer{
-    display: flex;
-    left: 0;
-    bottom: 0;
-    margin: 0;
-    padding: 0;
-    top:60px;
-    position: fixed;
-    height: 100%;
-    width: 100%;
+.menuContainer {
+  display: flex;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  top: 60px;
+  position: fixed;
+  height: 100%;
+  width: 100%;
 }
-.menuContainerHided{
-    
-    animation-duration: 500ms;
+.menuContainerHided {
+  animation-duration: 500ms;
 }
-.menuBackground{
-    flex: 1;
-    background-color: rgba(0,0,0,.8);
-    opacity: 0.9;
-    animation-duration: 500ms;
-    z-index: 9999;
-}
-
-.menuBackgroundHided{
-    animation-name: hideElement;
-    animation-duration: 500ms;
-}
-.menuCanvas{
-    display: flex;
-    background-color: white;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 400px;
-    justify-content: left;
-    align-content: left;
-    padding: 0;
-    padding-left: 30px;
-    padding-top: 10px;
-    margin: 0;
-    top: 60px;
-    bottom: 0;
-    position: fixed;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    z-index: 100000;
-
-    animation-name: slideMenu;
-    animation-duration: 500ms;
-    animation-timing-function: ease-in-out;
+.menuBackground {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0.9;
+  animation-duration: 500ms;
+  z-index: 9999;
 }
 
-.menuCanvasHided{
-    display: flex;
-    background-color: white;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 400px;
-    justify-content: left;
-    align-content: left;
-    padding: 0;
-    padding-left: 30px;
-    padding-top: 10px;
-    margin: 0;
-    top: 60px;
-    bottom: 0;
-    left: -500px;
-    position: fixed;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    z-index: 100000;
+.menuBackgroundHided {
+  animation-name: hideElement;
+  animation-duration: 500ms;
+}
+.menuCanvas {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 400px;
+  justify-content: left;
+  align-content: left;
+  padding: 0;
+  padding-left: 30px;
+  padding-top: 10px;
+  margin: 0;
+  top: 60px;
+  bottom: 0;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 100000;
 
-    animation-name: slideBackMenu;
-    animation-duration: 500ms;
-    animation-timing-function: ease-in-out;
+  animation-name: slideMenu;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
 }
 
-.SellProductButton{
-    font-family: inherit;
-    text-decoration: none;
-    font-size: larger;
-    color: white;
-    background-color: #1978F0;
-    border: none;
-    margin-left: -10px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 20px;
-    cursor: pointer;
-    outline-color: black;
+.menuCanvasHided {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 400px;
+  justify-content: left;
+  align-content: left;
+  padding: 0;
+  padding-left: 30px;
+  padding-top: 10px;
+  margin: 0;
+  top: 60px;
+  bottom: 0;
+  left: -500px;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 100000;
 
+  animation-name: slideBackMenu;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
 }
 
-
-li{
-    text-decoration: none;
-    list-style: none;
-    cursor: pointer;
-    list-style: none;
+.SellProductButton {
+  font-family: inherit;
+  text-decoration: none;
+  font-size: larger;
+  color: white;
+  background-color: #1978f0;
+  border: none;
+  margin-left: -10px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  outline-color: black;
 }
 
-.link{
-    font-weight: 400;
-    display: flex;
-    width:max-content;
-    list-style: none;
-    font-size: large;
-    text-decoration: none;
-    color: black;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    outline-color: black;
-}
-.link:hover{
-    background-color:#DEE3ED;
+li {
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+  list-style: none;
 }
 
-h3{
-    font-family: 'Open Sans';
-    font-size: larger;
-    font-weight: 700;
-    text-align: left;
+.link {
+  font-weight: 400;
+  display: flex;
+  width: max-content;
+  list-style: none;
+  font-size: large;
+  text-decoration: none;
+  color: black;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  outline-color: black;
+}
+.link:hover {
+  background-color: #dee3ed;
 }
 
-@media (max-width:500px) {
-    .menuCanvas{
-        width:92%;
-    }
-    .menuBackground{
-        display: none;
-    }
+h3 {
+  font-size: larger;
+  font-weight: 500;
+  text-align: left;
 }
 
-@media (min-width:945px) {
-    .SellProductButton{
-        display: none;
-    }
+@media (max-width: 500px) {
+  .menuCanvas {
+    width: 92%;
+  }
+  .menuBackground {
+    display: none;
+  }
 }
 
+@media (min-width: 945px) {
+  .SellProductButton {
+    display: none;
+  }
+}
 
 @keyframes slideMenu {
-    0%{
-        left:-500px
-    }
-    100%{
-        left: 0;
-    }
+  0% {
+    left: -500px;
+  }
+  100% {
+    left: 0;
+  }
 }
 
 @keyframes hideElement {
-    100%{
-        display: none;
-    }
+  100% {
+    display: none;
+  }
 }
 @keyframes slideBackMenu {
-    0%{
-        left:0
-    }
-
+  0% {
+    left: 0;
+  }
 }

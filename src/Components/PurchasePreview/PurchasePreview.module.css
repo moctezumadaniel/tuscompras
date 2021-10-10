@@ -1,65 +1,59 @@
-.ProductContainer{
-    width: 300px;
-    margin: 10px;
-    cursor: pointer;
+.ProductContainer {
+  width: 300px;
+  margin: 10px;
+  cursor: pointer;
 }
 
-.TitleContainer{
-    display: flex;
-    align-content: flex-start;
-    margin-bottom: 5px;
-    text-align: left;
-    font-size: larger;
+.TitleContainer {
+  display: flex;
+  align-content: flex-start;
+  margin-bottom: 5px;
+  text-align: left;
+  font-size: larger;
 }
 
-.ReviewPriceContainer{
-    text-align: left;
-    justify-content: flex-start;
-    font-family: 'Open Sans';
-    font-size: large;
-    font-weight: 700;
+.ReviewPriceContainer {
+  text-align: left;
+  justify-content: flex-start;
+  font-size: large;
+  font-weight: 500;
 }
-    .Review{
-        
-        margin-right: 20px;
-    }
-
-    .Price{
-        
-        margin-right: 20px;
-    }
-
-.ProductOptions{
-    display: flex;
-    padding-top: 10px;
-    align-content: space-around;
-    justify-content: space-between;
+.Review {
+  margin-right: 20px;
 }
 
-    .OptionButton{
-        width: 49%;
-        box-sizing: border-box;
-        font-size: larger;
-        background-color: white;
-        color: black;
-        border: none;
-        padding: 5px;
-        border-radius: 5px;
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-        cursor: pointer;
-    }
+.Price {
+  margin-right: 20px;
+}
 
-    .OptionButton:hover{
-        
-        box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.25);
-        
-    }
+.ProductOptions {
+  display: flex;
+  padding-top: 10px;
+  align-content: space-around;
+  justify-content: space-between;
+}
 
+.OptionButton {
+  width: 49%;
+  box-sizing: border-box;
+  font-size: larger;
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
 
-@media (max-width:400px) {
-    .ProductContainer{
-        width: 100%;
-        margin: 0;
-        padding: 10px;
-    }
+.OptionButton:hover {
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 400px) {
+  .ProductContainer {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
 }
