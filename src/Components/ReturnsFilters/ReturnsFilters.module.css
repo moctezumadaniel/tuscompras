@@ -1,126 +1,121 @@
-.FilterButton{
-    font-family: 'Roboto';
-    margin: 5px;
-    width: 97%;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    font-size: large;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    align-self: center;
-    border: none;
-    outline-color: #1978F0;
-    outline-offset: 3px;
+.FilterButton {
+  margin: 5px;
+  width: 97%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: large;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+  border: none;
+  outline-color: #1978f0;
+  outline-offset: 3px;
 }
-.FiltersContainer{
-    display: flex;
-    flex-direction: column;
+.FiltersContainer {
+  display: flex;
+  flex-direction: column;
 }
-.ListOfFilters{
-    display: flex;
-    flex-wrap: wrap;
+.ListOfFilters {
+  display: flex;
+  flex-wrap: wrap;
 }
-.FilterTitle{
-    margin: 5px;
-    margin-bottom: 0;
-    font-size: larger;
-    font-weight: 500;
+.FilterTitle {
+  margin: 5px;
+  margin-bottom: 0;
+  font-size: larger;
+  font-weight: 500;
 }
-.SelectInput{
-    padding: 5px;
-    margin-top: 5px;
-    background-color: white;
-    font-size: large;
-    border: none;
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    outline-color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 7px;
-    padding-bottom: 7px;
+.SelectInput {
+  padding: 5px;
+  margin-top: 5px;
+  background-color: white;
+  font-size: large;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  outline-color: black;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
-.SearchInput{
-    padding: 5px;
-    margin-top: 5px;
-    background-color: white;
-    font-size: large;
-    border: none;
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    outline-color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 7px;
-    padding-bottom: 7px;
+.SearchInput {
+  padding: 5px;
+  margin-top: 5px;
+  background-color: white;
+  font-size: large;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  outline-color: black;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
-.AmounthInput{
-    width: 95%;
-    padding: 5px;
-    background-color: white;
-    font-size: large;
-    border: none;
-    margin: 5px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    outline-color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 7px;
-    padding-bottom: 7px;
+.AmounthInput {
+  width: 95%;
+  padding: 5px;
+  background-color: white;
+  font-size: large;
+  border: none;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  outline-color: black;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
-.DatesInput{
-    width: 95%;
-    padding: 5px;
-    background-color: white;
-    font-size: large;
-    border: none;
-    margin: 5px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    outline-color: black;
-    font-family: Arial, Helvetica, sans-serif;
+.DatesInput {
+  width: 95%;
+  padding: 5px;
+  background-color: white;
+  font-size: large;
+  border: none;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  outline-color: black;
+  font-family: Roboto, sans-serif;
 }
-.OrderContainer{
-    padding: 5px;
-    width: 100%;
+.OrderContainer {
+  padding: 5px;
+  width: 100%;
 }
-.PriceContainer{
-    padding: 5px;
-    width: 100%;
+.PriceContainer {
+  padding: 5px;
+  width: 100%;
 }
-.RatingContainer{
-    padding: 5px;
-    width: 100%;
+.RatingContainer {
+  padding: 5px;
+  width: 100%;
 }
 
-.AmounthInputContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 5px;
+.AmounthInputContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5px;
 }
 
-@media (min-width:500px) {
-    .AmounthInput{
-        width: 200px;
-    }
-    .DatesInput{
-        width: 200px;
-    }
-    .FilterButton{
-        width: 450px;
-        align-self: flex-start;
-    }
-    .OrderContainer{
-        width: 450px;
-    }
-    .PriceContainer{
-        width: 450px;
-    }
-    .RatingContainer{
-        width: 450px;
-
-    }
+@media (min-width: 500px) {
+  .AmounthInput {
+    width: 200px;
+  }
+  .DatesInput {
+    width: 200px;
+  }
+  .FilterButton {
+    width: 450px;
+    align-self: flex-start;
+  }
+  .OrderContainer {
+    width: 450px;
+  }
+  .PriceContainer {
+    width: 450px;
+  }
+  .RatingContainer {
+    width: 450px;
+  }
 }

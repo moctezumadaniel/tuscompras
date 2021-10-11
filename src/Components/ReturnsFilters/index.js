@@ -14,6 +14,7 @@ const titles = {
   applyFilters: "Aplicar y cerrar filtros",
   orderBy: "Ordenar por:",
   totalRange: "Rango de totales:",
+  period: "Rango de fechas",
   ratedWith: "Calificados como",
   // ORDER BY
   latest: "Más recientes",
@@ -102,9 +103,9 @@ function ListOfFilters({ filters }) {
             type="number"
           />
         </div>
-        {/* TOTAL */}
+        {/* PERIOD */}
         <div className={styles.PriceContainer}>
-          <div className={styles.FilterTitle}>{titles.totalRange}</div>
+          <div className={styles.FilterTitle}>{titles.period}</div>
 
           <input
             className={styles.DatesInput}
