@@ -19,6 +19,7 @@ export default function Navbar() {
   const menuStatus = useSelector((state) => state.MainMenu.status);
   const dispatch = useDispatch();
   function activateSearch() {
+    window.scrollTo(0, 0);
     if (menuStatus === "opened") {
       dispatch(setMainMenuToClose());
       document.getElementById("body").style.overflow = "visible";
@@ -38,8 +39,9 @@ export default function Navbar() {
 
       <input
         type="search"
-        onFocus={() => activateSearch()}
-        onBlur={() => deactivateSearch()}
+        onClick={activateSearch}
+        onFocus={activateSearch}
+        onBlur={deactivateSearch}
         className={searchState ? styles.SearchBarSA : styles.SearchBar}
         placeholder="Buscar"
       />
@@ -62,6 +64,7 @@ function MenuButton() {
   const openMainMenu = () => {
     dispatch(setMainMenuToOpen());
     body.style.overflow = "hidden";
+    window.scrollTo(0, 0);
   };
   const closeMainMenu = () => {
     dispatch(setMainMenuToClose());
