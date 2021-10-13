@@ -7,9 +7,25 @@ body {
 }
 
 button {
-  font-family: Roboto, sans-serif;
+  font-family: inherit;
 }
-
+input {
+  font-family: inherit;
+  outline-color: black;
+}
+input::placeholder {
+  font-family: inherit;
+}
+select {
+  font-family: inherit;
+}
+option {
+  font-family: inherit;
+}
+textarea {
+  font-family: inherit;
+  outline-color: black;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
