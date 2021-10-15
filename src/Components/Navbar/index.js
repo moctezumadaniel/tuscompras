@@ -60,6 +60,7 @@ export default function Navbar() {
 function MenuButton() {
   const menuStatus = useSelector((state) => state.MainMenu.status);
   const body = document.getElementById("body");
+  const currentUrl = window.location.pathname;
   const dispatch = useDispatch();
   const openMainMenu = () => {
     dispatch(setMainMenuToOpen());
@@ -68,8 +69,13 @@ function MenuButton() {
   };
   const closeMainMenu = () => {
     dispatch(setMainMenuToClose());
-    body.style.overflow = "visible";
+    if (
+      currentUrl !== "/mensajes-de-vendedores" &&
+      currentUrl !== "/mensajes-de-clientes"
+    )
+      body.style.overflow = "visible";
   };
+
   if (menuStatus === "opened") {
     return (
       <button className={styles.MainMenuButton} onClick={() => closeMainMenu()}>

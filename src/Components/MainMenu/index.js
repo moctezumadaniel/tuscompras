@@ -24,11 +24,16 @@ const titles = {
 
 export default function MainMenu() {
   const menuStatus = useSelector((state) => state.MainMenu.status);
+  const currentUrl = window.location.pathname;
   const dispatch = useDispatch();
   const body = document.getElementById("body");
   const closeMainMenu = () => {
     dispatch(setMainMenuToClose());
-    body.style.overflow = "visible";
+    if (
+      currentUrl !== "/mensajes-de-vendedores" &&
+      currentUrl !== "/mensajes-de-clientes"
+    )
+      body.style.overflow = "visible";
   };
   if (menuStatus !== "")
     return (
