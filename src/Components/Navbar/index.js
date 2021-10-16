@@ -37,6 +37,15 @@ export default function Navbar() {
         TusCompras
       </a>
 
+      <button
+        className={
+          searchState ? styles.CloseSearchButtonSA : styles.CloseSearchButton
+        }
+        onClick={deactivateSearch}
+      >
+        <i class="bi bi-arrow-left-short" style={{ fontSize: "40px" }}></i>
+      </button>
+
       <input
         type="search"
         onClick={activateSearch}
@@ -59,6 +68,7 @@ export default function Navbar() {
 
 function MenuButton() {
   const menuStatus = useSelector((state) => state.MainMenu.status);
+  const searchState = useSelector((state) => state.Navbar.activeSearch);
   const body = document.getElementById("body");
   const currentUrl = window.location.pathname;
   const dispatch = useDispatch();
@@ -78,13 +88,23 @@ function MenuButton() {
 
   if (menuStatus === "opened") {
     return (
-      <button className={styles.MainMenuButton} onClick={() => closeMainMenu()}>
+      <button
+        className={
+          searchState ? styles.MainMenuButtonSA : styles.MainMenuButton
+        }
+        onClick={() => closeMainMenu()}
+      >
         <i class="bi bi-x" style={{ fontSize: "40px" }}></i>
       </button>
     );
   } else
     return (
-      <button className={styles.MainMenuButton} onClick={() => openMainMenu()}>
+      <button
+        className={
+          searchState ? styles.MainMenuButtonSA : styles.MainMenuButton
+        }
+        onClick={() => openMainMenu()}
+      >
         <i class="bi bi-list MainMenuIcon" style={{ fontSize: "40px" }}></i>
       </button>
     );
