@@ -5,6 +5,7 @@ import {
 } from "../../redux/actions/mainMenu";
 import {
   activateProductSearch,
+  changeProductSearch,
   deactivateProductSearch,
 } from "../../redux/actions/navbar";
 import styles from "./Navbar.module.css";
@@ -16,6 +17,7 @@ const titles = {
 export default function Navbar() {
   const navbarState = useSelector((state) => state.Navbar);
   const searchState = navbarState.activeSearch;
+  const search = navbarState.search;
   const menuStatus = useSelector((state) => state.MainMenu.status);
   const dispatch = useDispatch();
   function activateSearch() {
@@ -25,6 +27,9 @@ export default function Navbar() {
       document.getElementById("body").style.overflow = "visible";
     }
     dispatch(activateProductSearch());
+  }
+  function changeSearch(event) {
+    dispatch(changeProductSearch(event.target.value));
   }
   function deactivateSearch() {
     dispatch(deactivateProductSearch());
@@ -52,6 +57,8 @@ export default function Navbar() {
         onFocus={activateSearch}
         onBlur={deactivateSearch}
         className={searchState ? styles.SearchBarSA : styles.SearchBar}
+        onChange={changeSearch}
+        value={search}
         placeholder="Buscar"
       />
 
