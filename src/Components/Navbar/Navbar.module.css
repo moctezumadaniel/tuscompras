@@ -145,3 +145,9 @@
     display: block;
   }
 }
+
+@media (max-width: 350px) {
+  .Logo {
+    font-size: x-large;
+  }
+}
