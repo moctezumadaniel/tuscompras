@@ -33,7 +33,6 @@
   justify-content: left;
   align-content: left;
   padding: 0;
-  padding-left: 30px;
   padding-top: 10px;
   margin: 0;
   top: 60px;
@@ -57,7 +56,6 @@
   justify-content: left;
   align-content: left;
   padding: 0;
-  padding-left: 30px;
   padding-top: 10px;
   margin: 0;
   top: 60px;
@@ -88,12 +86,22 @@
   cursor: pointer;
   outline-color: black;
 }
+ul {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+}
 
 li {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 30px;
   text-decoration: none;
-  list-style: none;
   cursor: pointer;
   list-style: none;
+}
+li:hover {
+  background-color: #eceff3;
 }
 
 .link {
@@ -107,9 +115,6 @@ li {
   padding-top: 7px;
   padding-bottom: 7px;
   outline-color: black;
-}
-.link:hover {
-  background-color: #dee3ed;
 }
 
 h3 {
