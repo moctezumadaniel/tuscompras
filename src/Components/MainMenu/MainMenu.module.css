@@ -83,6 +83,7 @@
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 20px;
+  margin-left: 20px;
   cursor: pointer;
   outline-color: black;
 }
@@ -125,7 +126,7 @@ h3 {
 
 @media (max-width: 500px) {
   .menuCanvas {
-    width: 92%;
+    width: 100%;
   }
   .menuBackground {
     display: none;
