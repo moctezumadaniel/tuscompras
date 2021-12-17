@@ -1,9 +1,9 @@
 const initialState = {
   status: "",
-  orderBy: "",
+  orderBy: "MostImportant",
   priceFrom: "",
   priceTo: "",
-  ratedWith: "",
+  ratedWith: "everyRating",
 };
 export const ProductFiltersReducer = (state = initialState, action) => {
   switch (action.type) {

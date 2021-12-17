@@ -77,7 +77,11 @@ function ListOfFilters({ filters }) {
         {/* ORDER */}
         <div className={styles.OrderContainer}>
           <div className={styles.FilterTitle}>{titles.orderBy}</div>
-          <select className={styles.SelectInput} onChange={changeOrder}>
+          <select
+            value={filters.orderBy}
+            className={styles.SelectInput}
+            onChange={changeOrder}
+          >
             <option value="latest">{titles.latest}</option>
             <option value="oldest">{titles.oldest}</option>
             <option value="greatestTotal">{titles.greatestTotal}</option>

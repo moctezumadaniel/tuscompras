@@ -86,6 +86,7 @@ function ListOfFilters() {
         <div className={styles.OrderContainer}>
           <div className={styles.FilterTitle}>{titles.orderBy}</div>
           <select
+            value={filters.orderBy}
             className={styles.SelectInput}
             onChange={(e) => changeOrder(e)}
           >
@@ -116,7 +117,11 @@ function ListOfFilters() {
         {/* RATING */}
         <div className={styles.RatingContainer}>
           <div className={styles.FilterTitle}>{titles.ratedWith}</div>
-          <select className={styles.SelectInput} onChange={changeRating}>
+          <select
+            value={filters.ratedWith}
+            className={styles.SelectInput}
+            onChange={changeRating}
+          >
             <option value="ratedTen">{titles.ratedTen}</option>
             <option value="ratedNine">{titles.ratedNine}</option>
             <option value="ratedEight">{titles.ratedEight}</option>

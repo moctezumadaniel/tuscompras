@@ -1,5 +1,5 @@
 const initialState = {
-  status: "",
+  status: "latest",
   orderBy: "",
   minTotal: "",
   maxTotal: "",

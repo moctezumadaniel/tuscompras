@@ -1,6 +1,6 @@
 const initialState = {
   status: "",
-  orderBy: "",
+  orderBy: "latest",
   minTotal: "",
   maxTotal: "",
   initialDate: "",
