@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { setMainMenuToClose } from "../../redux/actions/mainMenu";
 import styles from "./MainMenu.module.css";
 const titles = {

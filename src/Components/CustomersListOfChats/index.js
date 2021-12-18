@@ -101,7 +101,7 @@ function ChatPreview({ name, lastMessage }) {
   return (
     <div onClick={() => selectChat()}>
       <div className={styles.ChatPreview}>
-        <img width="50" height="50" />
+        <img width="50" height="50" alt="" />
         <div className={styles.ChatDescription}>
           <div className={styles.ChatName}>{name}</div>
           <div>{lastMessage}</div>

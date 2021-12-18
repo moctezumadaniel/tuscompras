@@ -3,7 +3,6 @@ import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import React from "react";
 import Navbar from "../Navbar";
 import MainMenu from "../MainMenu";
-import { Nav } from "react-bootstrap";
 
 const ListOfProducts = React.lazy(() => import("../ListOfProducts"));
 const UserProducts = React.lazy(() => import("../UserProducts"));
