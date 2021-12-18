@@ -134,7 +134,7 @@ h3 {
   }
 }
 
-@media (min-width: 945px) {
+@media (min-width: 1000px) {
   .SellProductButton {
     display: none;
   }
