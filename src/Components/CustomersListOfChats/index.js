@@ -1,12 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
-import { hideCustomersListOfChats } from "../../redux/actions/customerChats";
+import {
+  changeNameCustomersListOfChats,
+  hideCustomersListOfChats,
+} from "../../redux/actions/customerChats";
 import styles from "./CustomersListOfChats.module.css";
 const titles = {
   chatSearch: "Buscar nombre del cliente",
 };
 function CustomersListOfChats() {
+  const dispatch = useDispatch();
   const customerChats = useSelector((state) => state.CustomerChats);
-
+  const changeCustomerName = (event) => {
+    dispatch(changeNameCustomersListOfChats(event.target.value));
+  };
   return (
     <div
       className={
@@ -16,6 +22,8 @@ function CustomersListOfChats() {
       }
     >
       <input
+        value={customerChats.customerName}
+        onChange={changeCustomerName}
         type="search"
         className={styles.ChatSearch}
         placeholder={titles.chatSearch}

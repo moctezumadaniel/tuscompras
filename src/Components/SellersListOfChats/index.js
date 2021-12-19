@@ -1,11 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
-import { hideSellersListOfChats } from "../../redux/actions/sellerChats";
+import {
+  changeNameSellersListOfChats,
+  hideSellersListOfChats,
+} from "../../redux/actions/sellerChats";
 import styles from "./SellersListOfChats.module.css";
 const titles = {
   chatSearch: "Buscar nombre del vendedor",
 };
 function SellersListOfChats() {
+  const dispatch = useDispatch();
   const sellerChats = useSelector((state) => state.SellerChats);
+  const changeSellerName = (event) => {
+    dispatch(changeNameSellersListOfChats(event.target.value));
+  };
   return (
     <div
       className={
@@ -15,6 +22,8 @@ function SellersListOfChats() {
       }
     >
       <input
+        value={sellerChats.sellerName}
+        onChange={changeSellerName}
         type="search"
         className={styles.ChatSearch}
         placeholder={titles.chatSearch}
