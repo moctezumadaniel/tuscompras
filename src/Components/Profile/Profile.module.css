@@ -43,7 +43,7 @@
   cursor: pointer;
   align-self: center;
   border: none;
-  outline-color: #1978f0;
+  outline-color: #000;
   outline-offset: 3px;
 }
 
@@ -62,7 +62,7 @@
   cursor: pointer;
   align-self: center;
   border: none;
-  outline-color: #1978f0;
+  outline-color: #000;
   outline-offset: 3px;
 }
 .AddressesContainer {
@@ -107,7 +107,7 @@
   cursor: pointer;
   align-self: center;
   border: none;
-  outline-color: black;
+  outline-color: #f40000;
   outline-offset: 3px;
 }
 
@@ -126,7 +126,7 @@
   cursor: pointer;
   align-self: center;
   border: none;
-  outline-color: black;
+  outline-color: #1978f0;
   outline-offset: 3px;
 }
 

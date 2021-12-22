@@ -96,6 +96,9 @@
   padding-right: 10px;
   border-radius: 20px;
   cursor: pointer;
+
+  outline-offset: 3px;
+  outline-color: #1978f0;
 }
 
 .LogInAndOut {
@@ -112,7 +115,7 @@
   border-radius: 20px;
   cursor: pointer;
 
-  outline-color: #1978f0;
+  outline-color: #000;
   outline-offset: 3px;
   outline-width: 3px;
 }

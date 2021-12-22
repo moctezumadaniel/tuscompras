@@ -1,131 +1,139 @@
-.ProductSettingsContainer{
-    display: flex;
-    flex-direction: column;
+.ProductSettingsContainer {
+  display: flex;
+  flex-direction: column;
 }
 
-.MainTitle{
-    font-size: x-large;
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
-    margin:10px;
-    margin-bottom: 2px;
+.MainTitle {
+  font-size: x-large;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
+  margin-bottom: 2px;
 }
 
-.ListOfImages{
-    display: flex;
-    flex-wrap: wrap;
+.ListOfImages {
+  display: flex;
+  flex-wrap: wrap;
 }
-.ImageContainer{
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    margin: 10px;
-}
-
-.Image{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 100%;
-    height: 200px;
-    border-radius: 10px;
-}
-.Image img{
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%;
-    background-color:gray;
+.ImageContainer {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin: 10px;
 }
 
-.ImageButtons{
-    padding-top: 5px;
-    display: flex;
-    align-content: space-between;
-    justify-content: space-around;
+.Image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+.Image img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: gray;
 }
 
-.DeleteImage{
-    font-size: large;
-    padding: 5px;
-    width: 48%;
-    background-color: #f40000;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.ImageButtons {
+  padding-top: 5px;
+  display: flex;
+  align-content: space-between;
+  justify-content: space-around;
 }
 
-.ChangeImage{
-    font-size: large;
-    padding: 5px;
-    width: 48%;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.AddImage{
-    font-size: large;
-    padding: 5px;
-    width: 98%;
-    background-color: #1978F0;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.DeleteImage {
+  font-size: large;
+  padding: 5px;
+  width: 48%;
+  background-color: #f40000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  outline-offset: 3px;
+  outline-color: #f40000;
 }
 
-.DescriptionsContainer{
-    display: flex;
-    padding: 10px;
-    
+.ChangeImage {
+  font-size: large;
+  padding: 5px;
+  width: 48%;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline-offset: 3px;
+  outline-color: #000;
 }
-.ShortDescription{
-    width: 100%;
-    height: 150px;
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
-    border: none;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    resize: none;
-    outline-color: black;
+.AddImage {
+  font-size: large;
+  padding: 5px;
+  width: 98%;
+  background-color: #1978f0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline-offset: 3px;
+  outline-color: #1978f0;
 }
 
-.CompleteDescription{
-    width: 100%;
-    height: 400px;
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
-    border: none;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    resize: none;
-    outline-color: black;
+.DescriptionsContainer {
+  display: flex;
+  padding: 10px;
 }
-.SaveProductContainer{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 10px;
-    padding-top: 0;
+.ShortDescription {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  border: none;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  resize: none;
+  outline-color: black;
 }
-.SaveProduct{
-    font-size: larger;
-    padding: 5px;
-    width: 98%;
-    background-color: #1978F0;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+
+.CompleteDescription {
+  width: 100%;
+  height: 400px;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  border: none;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  resize: none;
+  outline-color: black;
 }
-@media (max-width:400px) {
-    .ImageContainer{
-        width: 95%;
-    }
+.SaveProductContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+  padding-top: 0;
+}
+.SaveProduct {
+  font-size: larger;
+  padding: 5px;
+  width: 98%;
+  background-color: #1978f0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline-offset: 3px;
+  outline-color: #1978f0;
+}
+@media (max-width: 400px) {
+  .ImageContainer {
+    width: 95%;
+  }
 }
