@@ -3,7 +3,7 @@ function ProductPreview({ title, review, price }) {
   return (
     <a href="" className={styles.ProductLink}>
       <div className={styles.ProductContainer}>
-        <img src="logo512.png" width="300px" alt="" />
+        <img src="logo512.png" alt="" className={styles.Image} />
 
         <div className={styles.DescriptionContainer}>
           <span className={styles.TitleContainer}>{title}</span>
