@@ -12,6 +12,9 @@
   font-size: larger;
 }
 
+.Image {
+  width: 100%;
+}
 .ReviewPriceContainer {
   text-align: left;
   justify-content: flex-start;
