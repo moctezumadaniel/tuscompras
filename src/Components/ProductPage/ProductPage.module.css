@@ -1,131 +1,147 @@
-.FullContainer{
-    display: block;
+.FullContainer {
+  display: block;
 }
 
-.LeftContainer{
-    width: 100%;
+.LeftContainer {
+  width: 100%;
+  max-width: 400px;
 }
-.MainDetails{
-    padding: 5px;
-    margin-bottom: 20px;
+.MainDetails {
+  padding: 10px;
+  max-width: 400px;
+}
+.Images {
+  width: 100%;
+  height: 250px;
+}
+
+.Images img {
+  background-color: beige;
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: gray;
+}
+
+.Buttons {
+  display: flex;
+  padding-top: 10px;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.Buy {
+  font-size: large;
+  font-weight: 400;
+  padding: 5px;
+  width: 49%;
+  background-color: #1978f0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  outline-offset: 3px;
+  outline-color: #1978f0;
+}
+
+.Contact {
+  font-size: large;
+  padding: 10px;
+  width: 49%;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  outline-offset: 3px;
+  outline-color: black;
+}
+
+.ShortDescription {
+  padding-top: 5px;
+  font-size: x-large;
+}
+
+.Amounth {
+  padding-top: 10px;
+  font-size: large;
+  font-weight: 500;
+  color: #1978f0;
+}
+
+.CommentsContainer {
+  display: flex;
+  padding: 10px;
+}
+
+.CommentsSummary {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.CommentsHeader {
+  margin-bottom: 10px;
+}
+
+.Review {
+  font-size: larger;
+  font-weight: 500;
+  color: #41b22e;
+  margin-right: 10px;
+}
+
+.NoComments {
+  font-size: medium;
+  font-weight: 300;
+}
+
+.FeaturedComment {
+  margin-bottom: 10px;
+}
+
+.OpenCommentsContainer {
+  display: flex;
+  align-content: flex-end;
+  justify-content: right;
+}
+
+.OpenComments {
+  background: none;
+  border: none;
+  font-family: "Roboto" sans-serif;
+  font-size: medium;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.CompleteDescriptionContainer {
+  display: flex;
+  box-sizing: border-box;
+  padding: 10px;
+  max-width: 400px;
+}
+.CompleteDescription {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 750px) {
+  .FullContainer {
+    display: flex;
+  }
+  .LeftContainer {
+    min-width: 400px;
     max-width: 400px;
+  }
+  .CompleteDescriptionContainer {
+    max-width: 600px;
+  }
 }
-    .Images{
-        width: 100%;
-        height: 200px;
-    }
-
-        .Images img{
-            background-color: beige;
-            flex-shrink: 0;
-            min-width: 100%;
-            min-height: 100%;
-            background-color:gray;
-        }
-
-    .Buttons{
-        display: flex;
-        padding-top: 10px;
-        justify-content: space-between;
-        align-content: space-between;
-    }
-
-        .Buy{
-            font-size: large;
-            font-weight: 500;
-            padding: 5px;
-            width: 49%;
-            background-color: #1978F0;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .Contact{
-            font-size: large;
-            padding: 10px;
-            width: 49%;
-            background-color: black;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-    .ShortDescription{
-        padding-top: 5px;
-        font-size: larger;
-    }
-
-    .Amounth{
-        padding-top: 10px;
-        font-size: larger;
-        color: #1978F0;
-    }
-
-.CommentsContainer{
-    display: flex;
-    padding: 5px;
-}
-
-    .CommentsSummary{
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    }
-
-        .CommentsHeader{
-            margin-bottom: 10px;
-        }
-
-            .Review{
-                font-size: larger;
-                font-weight: 500;
-                color: #41B22E;
-                margin-right: 10px;
-            }
-
-            .NoComments{
-                font-size: medium;
-                font-weight: 300;
-            }
-
-        .FeaturedComment{
-            margin-bottom: 10px;
-        }
-
-        .OpenCommentsContainer{
-            display: flex;
-            align-content: flex-end;
-            justify-content: right;
-        }
-
-            .OpenComments{
-                font-weight: 500;
-                cursor: pointer;
-            }
-
-
-.CompleteDescriptionContainer{
-    display: flex;
-    padding: 5px;
-}
-    .CompleteDescription{
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    }
-
-    @media (min-width:750px) {
-        .FullContainer{
-            display: flex;
-        }
-        .LeftContainer{
-            min-width: 400px;
-            max-width: 400px;
-        }
-        
-    }

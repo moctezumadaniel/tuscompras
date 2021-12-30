@@ -1,7 +1,7 @@
 import styles from "./ProductPreview.module.css";
 function ProductPreview({ title, review, price }) {
   return (
-    <a href="" className={styles.ProductLink}>
+    <a href="/producto" className={styles.ProductLink}>
       <div className={styles.ProductContainer}>
         <img src="logo512.png" alt="" className={styles.Image} />
 

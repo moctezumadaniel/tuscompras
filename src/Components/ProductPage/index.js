@@ -64,9 +64,7 @@ function CommentsSummary() {
         <div className={styles.FeaturedComment}>{titles.featuredComment}</div>
 
         <div className={styles.OpenCommentsContainer}>
-          <a className={styles.OpenComments} href="/comments">
-            {titles.openComments}
-          </a>
+          <button className={styles.OpenComments}>{titles.openComments}</button>
         </div>
       </div>
     </div>
