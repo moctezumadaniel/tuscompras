@@ -35,7 +35,7 @@ export default function MainMenu() {
     )
       body.style.overflow = "visible";
   };
-  if (menuStatus !== "")
+  if (menuStatus === "opened")
     return (
       <Router>
         <div

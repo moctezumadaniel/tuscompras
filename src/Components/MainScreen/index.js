@@ -22,8 +22,8 @@ export default function MainScreen() {
     <React.Suspense fallback={<Navbar />}>
       <Router>
         <div className={styles.MainScreenContainer} id="Main">
-          <MainMenu />
           <Navbar />
+          <MainMenu />
 
           <Switch>
             <Route path="/productos">

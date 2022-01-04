@@ -22,7 +22,7 @@ export default function Navbar() {
   const dispatch = useDispatch();
   function activateSearch() {
     window.scrollTo(0, 0);
-    if (menuStatus === "opened") {
+    if (menuStatus === "opened" && window.innerWidth < 500) {
       dispatch(setMainMenuToClose());
       document.getElementById("body").style.overflow = "visible";
     }
