@@ -45,7 +45,9 @@ export default ProductSettings;
 function ProductImages() {
   const images = useSelector((state) => state.ProductSettings.image);
   const dispatch = useDispatch();
+
   function addImage(event) {
+    if (!event.target.files || !event.target.files[0]) return;
     const reader = new FileReader();
     reader.onload = (e) => {
       dispatch(addProductSettingsImage(e.target.result));
@@ -53,7 +55,6 @@ function ProductImages() {
     };
     reader.readAsDataURL(event.target.files[0]);
   }
-
   return (
     <div>
       <div className={styles.MainTitle}>{titles.images}</div>
@@ -72,22 +73,16 @@ function ProductImages() {
         )}
 
         <div className={styles.ImageContainer}>
-          <div className={styles.Image}>
-            <img alt="" />
-          </div>
-
-          <div className={styles.ImageButtons}>
-            <label className={styles.AddImage} for="addImage">
-              {titles.addImage}
-              <input
-                id="addImage"
-                type="file"
-                onChange={addImage}
-                accept="image/jpg, image/jpeg"
-                className={styles.AddImageHiden}
-              ></input>
-            </label>
-          </div>
+          <label className={styles.AddImage} for="addImage">
+            {titles.addImage}
+            <input
+              id="addImage"
+              type="file"
+              onChange={addImage}
+              accept="image/jpg, image/jpeg"
+              className={styles.AddImageHiden}
+            ></input>
+          </label>
         </div>
       </div>
     </div>
