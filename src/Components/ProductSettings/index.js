@@ -1,3 +1,6 @@
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { addProductSettingsImage } from "../../redux/actions/productSettings";
 import styles from "./ProductSettings.module.css";
 const titles = {
   newProduct: "Nuevo producto",
@@ -40,28 +43,50 @@ function ProductSettings() {
 export default ProductSettings;
 
 function ProductImages() {
+  const images = useSelector((state) => state.ProductSettings.image);
+  const dispatch = useDispatch();
+  function addImage(event) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      dispatch(addProductSettingsImage(e.target.result));
+      console.log("imagen añadida");
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  }
+
   return (
     <div>
       <div className={styles.MainTitle}>{titles.images}</div>
       <div className={styles.ListOfImages}>
+        {images !== null && (
+          <div className={styles.ImageContainer}>
+            <div className={styles.Image}>
+              <img alt="" src={images} width="100" />
+            </div>
+
+            <div className={styles.ImageButtons}>
+              <button className={styles.DeleteImage}>{titles.delete}</button>
+              <button className={styles.ChangeImage}>{titles.change}</button>
+            </div>
+          </div>
+        )}
+
         <div className={styles.ImageContainer}>
           <div className={styles.Image}>
             <img alt="" />
           </div>
 
           <div className={styles.ImageButtons}>
-            <button className={styles.DeleteImage}>{titles.delete}</button>
-            <button className={styles.ChangeImage}>{titles.change}</button>
-          </div>
-        </div>
-
-        <div className={styles.ImageContainer}>
-          <div className={styles.Image}>
-            <img alt="" />
-          </div>
-
-          <div className={styles.ImageButtons}>
-            <button className={styles.AddImage}>{titles.addImage}</button>
+            <label className={styles.AddImage} for="addImage">
+              {titles.addImage}
+              <input
+                id="addImage"
+                type="file"
+                onChange={addImage}
+                accept="image/jpg, image/jpeg"
+                className={styles.AddImageHiden}
+              ></input>
+            </label>
           </div>
         </div>
       </div>

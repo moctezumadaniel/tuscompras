@@ -28,7 +28,6 @@
   align-items: center;
   overflow: hidden;
   width: 100%;
-  height: 200px;
   border-radius: 10px;
 }
 .Image img {
@@ -82,8 +81,11 @@
   cursor: pointer;
   outline-offset: 3px;
   outline-color: #1978f0;
+  text-align: center;
 }
-
+.AddImageHiden {
+  display: none;
+}
 .DescriptionsContainer {
   display: flex;
   padding: 10px;

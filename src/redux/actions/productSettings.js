@@ -11,3 +11,10 @@ export const changeProductSettingsCompleteDescription = (description) => {
     description,
   };
 };
+
+export const addProductSettingsImage = (image) => {
+  return {
+    type: "ADD_PRODUCT_SETTINGS_IMAGE",
+    image,
+  };
+};
