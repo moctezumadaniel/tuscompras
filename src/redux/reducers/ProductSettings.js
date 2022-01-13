@@ -1,7 +1,7 @@
 const initialState = {
   shortDescription: "",
   completeDescription: "",
-  image: null,
+  images: [],
 };
 export const ProductSettingsReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -18,7 +18,15 @@ export const ProductSettingsReducer = (state = initialState, action) => {
     case "ADD_PRODUCT_SETTINGS_IMAGE":
       return {
         ...state,
-        image: action.image,
+        images: [
+          ...state.images,
+          { image: action.image, id: new Date().getTime() },
+        ],
+      };
+    case "DELETE_PRODUCT_SETTINGS_IMAGE":
+      return {
+        ...state,
+        images: state.images.filter((i) => i.id !== action.id),
       };
     default:
       return state;

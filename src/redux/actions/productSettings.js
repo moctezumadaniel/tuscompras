@@ -18,3 +18,10 @@ export const addProductSettingsImage = (image) => {
     image,
   };
 };
+
+export const deleteProductSettingsImage = (id) => {
+  return {
+    type: "DELETE_PRODUCT_SETTINGS_IMAGE",
+    id,
+  };
+};

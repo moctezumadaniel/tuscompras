@@ -103,8 +103,16 @@
   align-items: center;
   justify-content: center;
 }
+
+.AddImage:focus-within {
+  outline-color: gray;
+  outline-style: solid;
+  outline-width: 3px;
+}
+
 .AddImageHiden {
-  display: none;
+  position: absolute;
+  left: -99999rem;
 }
 .DescriptionsContainer {
   display: flex;

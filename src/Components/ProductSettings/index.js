@@ -1,6 +1,9 @@
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { addProductSettingsImage } from "../../redux/actions/productSettings";
+import {
+  addProductSettingsImage,
+  deleteProductSettingsImage,
+} from "../../redux/actions/productSettings";
 import styles from "./ProductSettings.module.css";
 const titles = {
   newProduct: "Nuevo producto",
@@ -43,7 +46,7 @@ function ProductSettings() {
 export default ProductSettings;
 
 function ProductImages() {
-  const images = useSelector((state) => state.ProductSettings.image);
+  const images = useSelector((state) => state.ProductSettings.images);
   const dispatch = useDispatch();
 
   function addImage(event) {
@@ -51,26 +54,36 @@ function ProductImages() {
     const reader = new FileReader();
     reader.onload = (e) => {
       dispatch(addProductSettingsImage(e.target.result));
-      console.log("imagen añadida");
     };
     reader.readAsDataURL(event.target.files[0]);
   }
+
+  function deleteImage(index) {
+    dispatch(deleteProductSettingsImage(index));
+  }
+
   return (
     <div>
       <div className={styles.MainTitle}>{titles.images}</div>
       <div className={styles.ListOfImages}>
-        {images !== null && (
-          <div className={styles.ImageContainer}>
-            <div className={styles.Image}>
-              <img alt="" src={images} width="100" />
-            </div>
+        {images.length > 0 &&
+          images.map((item) => (
+            <div className={styles.ImageContainer} key={item.id}>
+              <div className={styles.Image}>
+                <img alt="" src={item.image} width="100" />
+              </div>
 
-            <div className={styles.ImageButtons}>
-              <button className={styles.DeleteImage}>{titles.delete}</button>
-              <button className={styles.ChangeImage}>{titles.change}</button>
+              <div className={styles.ImageButtons}>
+                <button
+                  className={styles.DeleteImage}
+                  onClick={() => deleteImage(item.id)}
+                >
+                  {titles.delete}
+                </button>
+                <button className={styles.ChangeImage}>{titles.change}</button>
+              </div>
             </div>
-          </div>
-        )}
+          ))}
 
         <div className={styles.AddImageContainer}>
           <label className={styles.AddImage} for="addImage">
