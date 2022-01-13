@@ -72,7 +72,7 @@ function ProductImages() {
           </div>
         )}
 
-        <div className={styles.ImageContainer}>
+        <div className={styles.AddImageContainer}>
           <label className={styles.AddImage} for="addImage">
             {titles.addImage}
             <input
