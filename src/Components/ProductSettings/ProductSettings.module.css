@@ -72,6 +72,7 @@
 }
 
 .ChangeImage {
+  display: flex;
   font-size: large;
   padding: 5px;
   width: 48%;
@@ -80,9 +81,23 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  outline-offset: 3px;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.ChangeImage:focus-within {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-offset: 2px;
   outline-color: #000;
 }
+
+.ChangeImageHiden {
+  position: absolute;
+  left: -99999rem;
+}
+
 .AddImage {
   display: flex;
   box-sizing: border-box;

@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import {
   addProductSettingsImage,
+  changeProductSettingsImage,
   deleteProductSettingsImage,
 } from "../../redux/actions/productSettings";
 import styles from "./ProductSettings.module.css";
@@ -62,10 +63,20 @@ function ProductImages() {
     dispatch(deleteProductSettingsImage(index));
   }
 
+  const changeImage = (id) => (event) => {
+    if (!event.target.files || !event.target.files[0]) return;
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      dispatch(changeProductSettingsImage(id, e.target.result));
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  };
+
   return (
     <div>
       <div className={styles.MainTitle}>{titles.images}</div>
       <div className={styles.ListOfImages}>
+        {/* IMAGES */}
         {images.length > 0 &&
           images.map((item) => (
             <div className={styles.ImageContainer} key={item.id}>
@@ -80,11 +91,24 @@ function ProductImages() {
                 >
                   {titles.delete}
                 </button>
-                <button className={styles.ChangeImage}>{titles.change}</button>
+                <label
+                  className={styles.ChangeImage}
+                  for={`changeImage${item.id}`}
+                >
+                  <input
+                    className={styles.ChangeImageHiden}
+                    id={`changeImage${item.id}`}
+                    type="file"
+                    accept="image/jpg, image/jpeg"
+                    onChange={changeImage(item.id)}
+                  ></input>
+                  {titles.change}
+                </label>
               </div>
             </div>
           ))}
 
+        {/* ADD IMAGE BUTTON*/}
         <div className={styles.AddImageContainer}>
           <label className={styles.AddImage} for="addImage">
             {titles.addImage}

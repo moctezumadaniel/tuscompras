@@ -25,3 +25,11 @@ export const deleteProductSettingsImage = (id) => {
     id,
   };
 };
+
+export const changeProductSettingsImage = (id, image) => {
+  return {
+    type: "CHANGE_PRODUCT_SETTINGS_IMAGE",
+    id,
+    image,
+  };
+};

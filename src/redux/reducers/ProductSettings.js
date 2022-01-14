@@ -28,6 +28,14 @@ export const ProductSettingsReducer = (state = initialState, action) => {
         ...state,
         images: state.images.filter((i) => i.id !== action.id),
       };
+    case "CHANGE_PRODUCT_SETTINGS_IMAGE":
+      return {
+        ...state,
+        images: state.images.map((i) => {
+          if (i.id === action.id) return { id: action.id, image: action.image };
+          return i;
+        }),
+      };
     default:
       return state;
   }
