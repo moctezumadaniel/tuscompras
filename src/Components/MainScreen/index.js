@@ -16,6 +16,7 @@ const Security = React.lazy(() => import("../Security"));
 const ProductSettings = React.lazy(() => import("../ProductSettings"));
 const Sales = React.lazy(() => import("../Sales"));
 const ProductPage = React.lazy(() => import("../ProductPage"));
+const Login = React.lazy(() => import("../Login"));
 
 export default function MainScreen() {
   return (
@@ -68,6 +69,10 @@ export default function MainScreen() {
 
             <Route path="/producto">
               <ProductPage />
+            </Route>
+
+            <Route path="/iniciar-sesion">
+              <Login />
             </Route>
 
             <Route path="/">
