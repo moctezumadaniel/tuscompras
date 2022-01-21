@@ -7,7 +7,7 @@ function PurchasePreview({ title, review, price }) {
   };
   return (
     <div className={styles.ProductContainer}>
-      <img src="logo512.png" className={styles.Image} alt="" />
+      <img src="imgtest3.jpg" className={styles.Image} alt="" />
 
       <div className={styles.DescriptionContainer}>
         <span className={styles.TitleContainer}>{title}</span>
