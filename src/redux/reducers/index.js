@@ -9,6 +9,8 @@ import { PurchasesFiltersReducer } from "./PurchasesFilters";
 import { ReturnsFiltersReducer } from "./ReturnsFilters";
 import { SalesFiltersReducer } from "./SalesFilters";
 import { SellerChatsReducer } from "./SellersChats";
+import { LoginReducer } from "./Login";
+import { SignupReducer } from "./Signup";
 
 const rootReducer = combineReducers({
   MainMenu: MainMenuReducer,
@@ -21,6 +23,8 @@ const rootReducer = combineReducers({
   SellerChats: SellerChatsReducer,
   Navbar: NavbarReducer,
   ProductSettings: ProductSettingsReducer,
+  Login: LoginReducer,
+  Signup: SignupReducer,
 });
 
 export default rootReducer;

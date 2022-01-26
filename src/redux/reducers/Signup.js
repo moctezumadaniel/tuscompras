@@ -3,7 +3,7 @@ const initialState = {
   signupPassword: "",
 };
 
-export const LoginReducer = (state = initialState, action) => {
+export const SignupReducer = (state = initialState, action) => {
   switch (action.type) {
     case "CHANGE_SIGNUP_EMAIL":
       return {
