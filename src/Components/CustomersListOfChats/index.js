@@ -101,7 +101,7 @@ function ListOfChats() {
   );
 }
 
-function ChatPreview({ name, lastMessage }) {
+export function ChatPreview({ name, lastMessage }) {
   const dispatch = useDispatch();
   function selectChat() {
     if (window.innerWidth < 750) dispatch(hideCustomersListOfChats());
@@ -111,7 +111,9 @@ function ChatPreview({ name, lastMessage }) {
       <div className={styles.ChatPreview}>
         <img width="50" height="50" alt="" />
         <div className={styles.ChatDescription}>
-          <div className={styles.ChatName}>{name}</div>
+          <div className={styles.ChatName} data-testid="customerName">
+            {name}
+          </div>
           <div>{lastMessage}</div>
         </div>
       </div>

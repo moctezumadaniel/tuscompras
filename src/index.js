@@ -3,18 +3,15 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { createStore } from "redux";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import rootReducer from "./redux/reducers";
-import { Provider } from "react-redux";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import ReduxProvider from "./Components/ReduxProvider";
 
-const store = createStore(rootReducer);
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <ReduxProvider>
       <App />
-    </Provider>
+    </ReduxProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
