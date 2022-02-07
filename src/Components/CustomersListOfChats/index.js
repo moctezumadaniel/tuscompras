@@ -24,6 +24,7 @@ function CustomersListOfChats() {
       <input
         value={customerChats.customerName}
         onChange={changeCustomerName}
+        name="chatSearch"
         type="search"
         className={styles.ChatSearch}
         placeholder={titles.chatSearch}
@@ -114,7 +115,7 @@ export function ChatPreview({ name, lastMessage }) {
           <div className={styles.ChatName} data-testid="customerName">
             {name}
           </div>
-          <div>{lastMessage}</div>
+          <div data-testid="lastMessage">{lastMessage}</div>
         </div>
       </div>
       <hr className={styles.ChatSeparator} />
