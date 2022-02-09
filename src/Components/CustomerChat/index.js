@@ -24,7 +24,9 @@ function CustomerChat({ name }) {
           <i class="bi bi-arrow-left-short" style={{ fontSize: "40px" }}></i>
         </button>
         <img width="50px" height="50px" alt="" />
-        <div className={styles.ChatName}>{"Juan Daniel Trejo Moctezuma"}</div>
+        <div className={styles.ChatName} data-testid="chatName">
+          {name}
+        </div>
       </div>
 
       <div className={styles.ListOfMessages}>
@@ -106,22 +108,26 @@ function CustomerChat({ name }) {
 }
 export default CustomerChat;
 
-function Message({ message }) {
+export function Message({ message }) {
   return (
     <div className={styles.MessageContainer}>
-      <div className={styles.Message}>{message}</div>
+      <div className={styles.Message} data-testid="message">
+        {message}
+      </div>
     </div>
   );
 }
-function UserMessage({ message }) {
+export function UserMessage({ message }) {
   return (
     <div className={styles.MessageContainer}>
-      <div className={styles.UserMessage}>{message}</div>
+      <div className={styles.UserMessage} data-testid="userMessage">
+        {message}
+      </div>
     </div>
   );
 }
 
-function WriteMessage() {
+export function WriteMessage() {
   return (
     <div className={styles.WriteMessage}>
       <input type="text" className={styles.MessageInput} />
