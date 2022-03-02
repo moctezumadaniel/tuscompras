@@ -1,5 +1,6 @@
 .MainContainer {
   padding: 10px;
+  max-width: 1200px;
 }
 
 .MainTitle {

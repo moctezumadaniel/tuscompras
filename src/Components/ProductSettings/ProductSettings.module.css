@@ -1,6 +1,7 @@
 .ProductSettingsContainer {
   display: flex;
   flex-direction: column;
+  max-width: 1200px;
 }
 
 .MainTitle {
@@ -162,7 +163,6 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  padding: 10px;
   padding-top: 0;
 }
 .SaveProduct {

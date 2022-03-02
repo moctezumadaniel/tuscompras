@@ -1,5 +1,6 @@
 .ProfileContainer {
   padding: 5px;
+  max-width: 1200px;
 }
 .Titles {
   font-family: Arial, Helvetica, sans-serif;
