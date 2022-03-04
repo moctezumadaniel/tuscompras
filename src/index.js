@@ -6,12 +6,15 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import ReduxProvider from "./Components/ReduxProvider";
+import AuthProvider from "./Components/AuthProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ReduxProvider>
-      <App />
-    </ReduxProvider>
+    <AuthProvider>
+      <ReduxProvider>
+        <App />
+      </ReduxProvider>
+    </AuthProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
