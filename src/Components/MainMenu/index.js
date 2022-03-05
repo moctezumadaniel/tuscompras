@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
 import { setMainMenuToClose } from "../../redux/actions/mainMenu";
+import { useAuth0 } from "@auth0/auth0-react";
 import styles from "./MainMenu.module.css";
 const titles = {
   sell: "Vender mi producto",
-
+  login: "Iniciar sesión",
   sales: "Ventas",
   products: "Mis productos",
   salesList: "Lista de ventas",
@@ -25,6 +26,7 @@ const titles = {
 export default function MainMenu() {
   const menuStatus = useSelector((state) => state.MainMenu.status);
   const currentUrl = window.location.pathname;
+  const { isLoading, isAuthenticated } = useAuth0();
   const dispatch = useDispatch();
   const body = document.getElementById("body");
   const closeMainMenu = () => {
@@ -52,8 +54,14 @@ export default function MainMenu() {
                 : styles.menuCanvasHided
             }
           >
-            <a className={styles.SellProductButton} href="/vender">
-              {titles.sell}
+            {isAuthenticated && !isLoading && (
+              <a className={styles.SellProductButton} href="/vender">
+                {titles.sell}
+              </a>
+            )}
+
+            <a className={styles.LogInAndOut} href="iniciar-sesion">
+              {titles.login}
             </a>
 
             <li>

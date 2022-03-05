@@ -90,6 +90,24 @@
   outline-offset: 3px;
   outline-color: #1978f0;
 }
+.LogInAndOut {
+  text-decoration: none;
+  font-family: inherit;
+  font-size: larger;
+  color: white;
+  background-color: #000000;
+  border: none;
+  margin-left: 10px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  outline-color: #000;
+  outline-offset: 3px;
+  outline-width: 3px;
+}
 ul {
   list-style: none;
   text-decoration: none;
@@ -138,6 +156,10 @@ h3 {
 
 @media (min-width: 1000px) {
   .SellProductButton {
+    display: none;
+  }
+
+  .LogInAndOut {
     display: none;
   }
 }

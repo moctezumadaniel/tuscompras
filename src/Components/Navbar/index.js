@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import { useAuth0 } from "@auth0/auth0-react";
 import {
   setMainMenuToClose,
   setMainMenuToOpen,
@@ -18,6 +19,7 @@ export default function Navbar() {
   const navbarState = useSelector((state) => state.Navbar);
   const searchState = navbarState.activeSearch;
   const search = navbarState.search;
+  const { isAuthenticated, isLoading } = useAuth0();
   const menuStatus = useSelector((state) => state.MainMenu.status);
   const dispatch = useDispatch();
   function activateSearch() {
@@ -61,14 +63,16 @@ export default function Navbar() {
         value={search}
         placeholder="Buscar"
       />
-
-      <a className={styles.SellProductButton} href="vender">
-        {titles.sell}
-      </a>
-
-      <a className={styles.LogInAndOut} href="iniciar-sesion">
-        {titles.login}
-      </a>
+      {isAuthenticated && !isLoading && (
+        <a className={styles.SellProductButton} href="vender">
+          {titles.sell}
+        </a>
+      )}
+      {!isAuthenticated && !isLoading && (
+        <a className={styles.LogInAndOut} href="iniciar-sesion">
+          {titles.login}
+        </a>
+      )}
     </div>
   );
 }
