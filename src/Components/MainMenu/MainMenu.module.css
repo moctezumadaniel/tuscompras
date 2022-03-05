@@ -108,6 +108,27 @@
   outline-offset: 3px;
   outline-width: 3px;
 }
+
+.Logout {
+  width: 100%;
+  padding-left: 30px;
+  font-weight: 400;
+  display: flex;
+  list-style: none;
+  font-size: large;
+  text-decoration: none;
+  color: black;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  outline-color: black;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.Logout:hover {
+  background-color: #eceff3;
+}
 ul {
   list-style: none;
   text-decoration: none;

@@ -19,7 +19,7 @@ export default function Navbar() {
   const navbarState = useSelector((state) => state.Navbar);
   const searchState = navbarState.activeSearch;
   const search = navbarState.search;
-  const { isAuthenticated, isLoading } = useAuth0();
+  const { isAuthenticated, isLoading, loginWithPopup } = useAuth0();
   const menuStatus = useSelector((state) => state.MainMenu.status);
   const dispatch = useDispatch();
   function activateSearch() {
@@ -69,9 +69,13 @@ export default function Navbar() {
         </a>
       )}
       {!isAuthenticated && !isLoading && (
-        <a className={styles.LogInAndOut} href="iniciar-sesion">
+        <button
+          className={styles.LogInAndOut}
+          type="button"
+          onClick={loginWithPopup}
+        >
           {titles.login}
-        </a>
+        </button>
       )}
     </div>
   );

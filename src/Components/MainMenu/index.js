@@ -21,12 +21,13 @@ const titles = {
   profileName: "Nombre y datos",
   addresses: "Direcciones",
   security: "Contraseña y seguridad",
+  logout: "Cerrar sesión",
 };
 
 export default function MainMenu() {
   const menuStatus = useSelector((state) => state.MainMenu.status);
   const currentUrl = window.location.pathname;
-  const { isLoading, isAuthenticated } = useAuth0();
+  const { isLoading, isAuthenticated, loginWithPopup, logout } = useAuth0();
   const dispatch = useDispatch();
   const body = document.getElementById("body");
   const closeMainMenu = () => {
@@ -59,10 +60,11 @@ export default function MainMenu() {
                 {titles.sell}
               </a>
             )}
-
-            <a className={styles.LogInAndOut} href="iniciar-sesion">
-              {titles.login}
-            </a>
+            {!isAuthenticated && !isLoading && (
+              <button className={styles.LogInAndOut} onClick={loginWithPopup}>
+                {titles.login}
+              </button>
+            )}
 
             <li>
               <h3>{titles.sales}</h3>
@@ -158,6 +160,13 @@ export default function MainMenu() {
                 {titles.security}
               </a>
             </li>
+            {isAuthenticated && !isLoading && (
+              <li>
+                <button className={styles.Logout} onClick={logout}>
+                  {titles.logout}
+                </button>
+              </li>
+            )}
           </ul>
           <div
             className={
