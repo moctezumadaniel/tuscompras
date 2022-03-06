@@ -120,14 +120,11 @@
   outline-width: 3px;
 }
 
-@media (max-width: 1100px) {
-  .LogInAndOut {
-    display: none;
-  }
-}
-
 @media (max-width: 1000px) {
   .SellProductButton {
+    display: none;
+  }
+  .LogInAndOut {
     display: none;
   }
 }

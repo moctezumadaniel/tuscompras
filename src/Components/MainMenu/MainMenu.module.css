@@ -166,6 +166,12 @@ h3 {
   text-align: left;
 }
 
+.Dialoge {
+  font-size: large;
+  padding: 10px;
+  line-height: 130%;
+  padding-left: 20px;
+}
 @media (max-width: 500px) {
   .menuCanvas {
     width: 100%;
