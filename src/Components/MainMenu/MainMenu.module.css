@@ -171,6 +171,11 @@ h3 {
   padding: 10px;
   line-height: 130%;
   padding-left: 20px;
+  background: none;
+  border: none;
+  outline-color: #000;
+  cursor: pointer;
+  text-align: left;
 }
 @media (max-width: 500px) {
   .menuCanvas {

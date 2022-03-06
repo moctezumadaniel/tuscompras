@@ -3,7 +3,7 @@ import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import React from "react";
 import Navbar from "../Navbar";
 import MainMenu from "../MainMenu";
-
+import { useAuth0 } from "@auth0/auth0-react";
 const ListOfProducts = React.lazy(() => import("../ListOfProducts"));
 const UserProducts = React.lazy(() => import("../UserProducts"));
 const CustomersReturns = React.lazy(() => import("../CustomersReturns"));
@@ -19,6 +19,8 @@ const ProductPage = React.lazy(() => import("../ProductPage"));
 const Login = React.lazy(() => import("../Login"));
 
 export default function MainScreen() {
+  const { isAuthenticated, isLoading } = useAuth0();
+  const loggedIn = isAuthenticated && !isLoading ? true : false;
   return (
     <React.Suspense fallback={<Navbar />}>
       <Router>
@@ -28,47 +30,71 @@ export default function MainScreen() {
 
           <Switch>
             <Route path="/productos">
-              <UserProducts />
+              {loggedIn ? <UserProducts /> : isLoading ? "" : <LoginMessage />}
             </Route>
 
             <Route path="/devoluciones-de-clientes">
-              <CustomersReturns />
+              {loggedIn ? (
+                <CustomersReturns />
+              ) : isLoading ? (
+                ""
+              ) : (
+                <LoginMessage />
+              )}
             </Route>
 
             <Route path="/mensajes-de-clientes">
-              <CustomersMessages />
+              {loggedIn ? (
+                <CustomersMessages />
+              ) : isLoading ? (
+                ""
+              ) : (
+                <LoginMessage />
+              )}
             </Route>
 
             <Route path="/compras">
-              <Purchases />
+              {loggedIn ? <Purchases /> : isLoading ? "" : <LoginMessage />}
             </Route>
 
             <Route path="/devoluciones">
-              <Returns />
+              {loggedIn ? <Returns /> : isLoading ? "" : <LoginMessage />}
             </Route>
 
             <Route path="/mensajes-de-vendedores">
-              <SellersMessages />
+              {loggedIn ? (
+                <SellersMessages />
+              ) : isLoading ? (
+                ""
+              ) : (
+                <LoginMessage />
+              )}
             </Route>
 
             <Route path="/perfil">
-              <Profile />
+              {loggedIn ? <Profile /> : isLoading ? "" : <LoginMessage />}
             </Route>
 
             <Route path="/seguridad">
-              <Security />
+              {loggedIn ? <Security /> : isLoading ? "" : <LoginMessage />}
             </Route>
 
             <Route path="/ventas">
-              <Sales />
+              {loggedIn ? <Sales /> : isLoading ? "" : <LoginMessage />}
             </Route>
 
             <Route path="/vender">
-              <ProductSettings />
+              {loggedIn ? (
+                <ProductSettings />
+              ) : isLoading ? (
+                ""
+              ) : (
+                <LoginMessage />
+              )}
             </Route>
 
             <Route path="/producto">
-              <ProductPage />
+              {loggedIn ? <ProductPage /> : isLoading ? "" : <LoginMessage />}
             </Route>
 
             <Route path="/iniciar-sesion">
@@ -84,3 +110,14 @@ export default function MainScreen() {
     </React.Suspense>
   );
 }
+
+const LoginMessage = () => {
+  const { loginWithPopup } = useAuth0();
+  return (
+    <div className={styles.LoginContainer}>
+      <button onClick={loginWithPopup} className={styles.LoginButton}>
+        Inicia sesión para acceder a esta página
+      </button>
+    </div>
+  );
+};

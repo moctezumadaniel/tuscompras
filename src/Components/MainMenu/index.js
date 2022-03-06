@@ -215,7 +215,9 @@ const LoggedOutMenu = () => {
             {titles.login}
           </button>
 
-          <p className={styles.Dialoge}>{titles.loginDialoge}</p>
+          <button onClick={loginWithPopup} className={styles.Dialoge}>
+            {titles.loginDialoge}
+          </button>
         </ul>
         <div
           className={
